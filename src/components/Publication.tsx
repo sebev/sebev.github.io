@@ -8,7 +8,8 @@ import {
 	Link,
 	Stack,
 	Tooltip,
-	Box
+	Box,
+	Button
 } from "@mui/material";
 
 type Props = {
@@ -30,14 +31,14 @@ type Props = {
 				{orcidLink && (
 					<Tooltip title="View ORCID profile">
 						<Link
-						href={orcidLink}
-						target="_blank"
-						rel="noopener"
-						sx={{
-							ml: 0.5,
-							display: "inline-flex",
-							alignItems: "center",
-						}}
+							href={orcidLink}
+							target="_blank"
+							rel="noopener"
+							sx={{
+								ml: 0.5,
+								display: "inline-flex",
+								alignItems: "center",
+							}}
 						>
 						<img
 							src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png"
@@ -68,9 +69,19 @@ type Props = {
 						return renderAuthor(id, idx, author);
 					})}
 				</Typography>
+
 				<Typography variant="body2" color="text.secondary">
-					{pub.venue.name} ({pub.venue.short} {pub.year})
+					{pub.venue.name} (
+						<Link
+							href={pub.venue.url}
+							target="_blank"
+							rel="noopener"
+						>
+							{pub.venue.short}
+						</Link>
+					)
 				</Typography>
+
 				<Stack direction="row" spacing={1} mt={1} flexWrap="wrap">
 					{pub.links?.map((link, i) => (
 						<Link
@@ -82,7 +93,12 @@ type Props = {
 							underline="hover"
 							sx={{ mr: 2 }}
 						>
-							{link.type.toUpperCase()}
+							<Button
+								variant="outlined"
+								size="small"
+							>
+								{link.type.toUpperCase()}
+							</Button>
 						</Link>
 					))}
 				</Stack>

@@ -100,12 +100,8 @@
         },
         "links": [
             {
-                "type": "handle",
-                "url": "http://hdl.handle.net/1942/46276"
-            },
-            {
                 "type": "arxiv",
-                "url": "https://arxiv.org/abs/2506.02262"
+                "url": "https://arxiv.org/abs/2504.17677"
             }
         ]
     }
