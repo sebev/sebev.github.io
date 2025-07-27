@@ -83,6 +83,20 @@
 			}
 		]
 	},
+	"rmenten": {
+		"firstName": "Raf",
+		"lastName": "Menten",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0000-0003-2875-9812"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/raf-menten"
+			}
+		]
+	},
 	"svanbrabant": {
 		"firstName": "Sebe",
 		"lastName": "Vanbrabant",

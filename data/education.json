@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Bachelor of Science in Computer Science",
+        "institution": "Hasselt University",
+        "faculty": "Faculty of Sciences",
+        "start": "2018",
+        "end": "2021"
+    },
+    {
+        "title": "Master of Science in Computer Science",
+        "institution": "Hasselt University",
+        "faculty": "Faculty of Sciences",
+        "start": "2021",
+        "end": "2023"
+    },
+    {
+        "title": "PhD in Software Systems Engineering Technology",
+        "institution": "Hasselt University",
+        "faculty": "Faculty of Engineering Technology",
+        "start": "2023",
+        "end": "2027"
+    }
+]
