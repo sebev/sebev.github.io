@@ -17,8 +17,8 @@ type Props = {
 	authors: Record<string, IAuthor>;
 };
 
-	export function Publication({ pub, authors }: Props) {
-		const renderAuthor = (id: string, idx: number, author: IAuthor) => {
+export function Publication({ pub, authors }: Props) {
+	const renderAuthor = (id: string, idx: number, author: IAuthor) => {
 		const fullName = `${author.firstName} ${author.lastName}`;
 		const orcidLink = author.links?.find((l) => l.type === "orcid")?.url;
 		const isMe = id === "svanbrabant";
@@ -50,13 +50,12 @@ type Props = {
 						</Link>
 					</Tooltip>
 				)}
-				{idx < pub.authors.length - 1 ? ", " : ""}
 			</React.Fragment>
 		);
 	};
 
 	return (
-		<Card variant="outlined" sx={{ mb: 2 }}>
+		<Card variant="outlined">
 			<CardContent>
 				<Stack direction="row" justifyContent="space-between" spacing={2}>
 					<Box>
@@ -67,20 +66,27 @@ type Props = {
 						<Typography variant="body2" color="text.secondary">
 							{pub.authors.map((id, idx) => {
 								const author = authors[id];
-								if (!author) return id;
-								return renderAuthor(id, idx, author);
+
+								return (
+									<React.Fragment key={id}>
+										{author ? renderAuthor(id, idx, author) : id}
+										{idx < pub.authors.length - 1 ? ", " : ""}
+									</React.Fragment>
+								);
 							})}
 						</Typography>
 
 						<Typography variant="body2" color="text.secondary">
 							{pub.venue.name} (
-								<Link
-									href={pub.venue.url}
-									target="_blank"
-									rel="noopener"
-								>
-									{pub.venue.short}
-								</Link>
+								<Tooltip title={pub.venue.parent}>
+									<Link
+										href={pub.venue.url}
+										target="_blank"
+										rel="noopener"
+									>
+										{pub.venue.short} - {pub.venue.type.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}
+									</Link>
+								</Tooltip>
 							)
 						</Typography>
 

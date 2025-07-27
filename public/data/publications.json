@@ -1,5 +1,36 @@
 [
     {
+        "title": "Explainable AI for Recommender Systems",
+        "authors": ["svanbrabant", "rmenten", "dvanacken"],
+        "date": "2021",
+        "venue": {
+            "name": "Bachelor's Thesis Computer Science",
+            "parent": "Hasselt University",
+            "short": "UHasselt",
+            "type": "thesis",
+            "url": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2020&i=4380&n=4&t=01"
+        },
+        "links": []
+    },
+    {
+        "title": "Notifications for Digital Assistants",
+        "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
+        "date": "2023",
+        "venue": {
+            "name": "Master's Thesis Computer Science",
+            "parent": "Hasselt University",
+            "short": "UHasselt",
+            "type": "thesis",
+            "url": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2022&i=2262&n=4&t=01"
+        },
+        "links": [
+            {
+                "type": "handle",
+                "url": "http://hdl.handle.net/1942/41285"
+            }
+        ]
+    },
+    {
         "title": "Opportunities and Challenges of Model Multiplicity in Interactive Software Systems",
         "authors": ["kluyten", "geerlings", "jliesenborgs", "groveloruiz", "svanbrabant", "dvanacken"],
         "date": "2024-06-25",
