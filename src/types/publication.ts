@@ -1,7 +1,7 @@
 export type IPublication = {
     title: string;
     authors: string[];
-    year: number;
+    date: string;
     venue: {
         name: string;
         parent: string;

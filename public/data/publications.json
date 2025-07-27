@@ -2,7 +2,7 @@
     {
         "title": "Opportunities and Challenges of Model Multiplicity in Interactive Software Systems",
         "authors": ["kluyten", "geerlings", "jliesenborgs", "groveloruiz", "svanbrabant", "dvanacken"],
-        "year": 2024,
+        "date": "2024-06-25",
         "venue": {
             "name": "2nd Workshop on Engineering Interactive Systems Embedding AI Technologies",
             "parent": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -20,7 +20,7 @@
     {
         "title": "AI-Spectra: A Visual Dashboard for Model Multiplicity to Enhance Informed and Transparent Decision-Making",
         "authors": ["geerlings", "svanbrabant", "jliesenborgs", "groveloruiz", "dvanacken", "kluyten"],
-        "year": 2025,
+        "date": "2025-05-30",
         "venue": {
             "name": "Engineering Interactive Computer Systems. EICS 2024 International Workshops",
             "parent": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -46,7 +46,7 @@
     {
         "title": "Composable Building Blocks for Controllable and Transparent Interactive AI Systems",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
-        "year": 2025,
+        "date": "2025-06-24",
         "venue": {
             "name": "3rd Workshop on Engineering Interactive Systems Embedding AI Technologies",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -68,7 +68,7 @@
     {
         "title": "ECHO: Enhancing Conversational Explainable AI through Tool-Augmented Language Models",
         "authors": ["svanbrabant", "geerlings", "groveloruiz", "dvanacken"],
-        "year": 2025,
+        "date": "2025-06-27",
         "venue": {
             "name": "Proceedings of the ACM on Human-Computer Interaction",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -90,7 +90,7 @@
     {
         "title": "INSIGHT: Bridging the Student-Teacher Gap in Times of Large Language Models",
         "authors": ["jthys", "svanbrabant", "dvanacken", "groveloruiz"],
-        "year": 2025,
+        "date": "2025-07-22",
         "venue": {
             "name": "D-SAIL Workshop - Transformative Curriculum Design: Digitalisation, Sustainability, and AI Literacy for 21st Century Learning",
             "parent": "The 26th International Conference on Artificial Intelligence in Education",

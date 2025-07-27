@@ -58,49 +58,62 @@ type Props = {
 	return (
 		<Card variant="outlined" sx={{ mb: 2 }}>
 			<CardContent>
-				<Typography variant="subtitle1" fontWeight={600}>
-					{pub.title}
-				</Typography>
-				
-				<Typography variant="body2" color="text.secondary">
-					{pub.authors.map((id, idx) => {
-						const author = authors[id];
-						if (!author) return id;
-						return renderAuthor(id, idx, author);
-					})}
-				</Typography>
+				<Stack direction="row" justifyContent="space-between" spacing={2}>
+					<Box>
+						<Typography variant="subtitle1" fontWeight={600}>
+							{pub.title}
+						</Typography>
+						
+						<Typography variant="body2" color="text.secondary">
+							{pub.authors.map((id, idx) => {
+								const author = authors[id];
+								if (!author) return id;
+								return renderAuthor(id, idx, author);
+							})}
+						</Typography>
 
-				<Typography variant="body2" color="text.secondary">
-					{pub.venue.name} (
-						<Link
-							href={pub.venue.url}
-							target="_blank"
-							rel="noopener"
-						>
-							{pub.venue.short}
-						</Link>
-					)
-				</Typography>
+						<Typography variant="body2" color="text.secondary">
+							{pub.venue.name} (
+								<Link
+									href={pub.venue.url}
+									target="_blank"
+									rel="noopener"
+								>
+									{pub.venue.short}
+								</Link>
+							)
+						</Typography>
 
-				<Stack direction="row" spacing={1} mt={1} flexWrap="wrap">
-					{pub.links?.map((link, i) => (
-						<Link
-							key={i}
-							href={link.url}
-							target="_blank"
-							rel="noopener"
-							variant="body2"
-							underline="hover"
-							sx={{ mr: 2 }}
-						>
-							<Button
-								variant="outlined"
-								size="small"
-							>
-								{link.type.toUpperCase()}
-							</Button>
-						</Link>
-					))}
+						<Stack direction="row" spacing={1} mt={1} flexWrap="wrap">
+							{pub.links?.map((link, i) => (
+								<Link
+									key={i}
+									href={link.url}
+									target="_blank"
+									rel="noopener"
+									variant="body2"
+									underline="hover"
+									sx={{ mr: 2 }}
+								>
+									<Button
+										variant="outlined"
+										size="small"
+									>
+										{link.type.toUpperCase()}
+									</Button>
+								</Link>
+							))}
+						</Stack>
+					</Box>
+					<Box
+						minWidth={50}
+						textAlign="right"
+						color="text.secondary"
+						fontWeight="medium"
+						fontSize="1rem"
+					>
+						{new Date(pub.date).getFullYear()}
+					</Box>
 				</Stack>
 			</CardContent>
 		</Card>
