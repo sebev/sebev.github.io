@@ -1,0 +1,112 @@
+[
+    {
+        "title": "Opportunities and Challenges of Model Multiplicity in Interactive Software Systems",
+        "authors": ["kluyten", "geerlings", "jliesenborgs", "groveloruiz", "svanbrabant", "dvanacken"],
+        "year": 2024,
+        "venue": {
+            "name": "2nd Workshop on Engineering Interactive Systems Embedding AI Technologies",
+            "parent": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "workshop",
+            "url": "https://sites.google.com/view/engineering-interactive-system/home"
+        },
+        "links": [
+            {
+                "type": "handle",
+                "url": "http://hdl.handle.net/1942/43354"
+            }
+        ]
+    },
+    {
+        "title": "AI-Spectra: A Visual Dashboard for Model Multiplicity to Enhance Informed and Transparent Decision-Making",
+        "authors": ["geerlings", "svanbrabant", "jliesenborgs", "groveloruiz", "dvanacken", "kluyten"],
+        "year": 2025,
+        "venue": {
+            "name": "Engineering Interactive Computer Systems. EICS 2024 International Workshops",
+            "parent": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "book-chapter",
+            "url": "https://sites.google.com/view/engineering-interactive-system/home"
+        },
+        "links": [
+            {
+                "type": "doi",
+                "url": "https://doi.org/10.1007/978-3-031-91760-8_5"
+            },
+            {
+                "type": "handle",
+                "url": "http://hdl.handle.net/1942/46330"
+            },
+            {
+                "type": "arxiv",
+                "url": "https://arxiv.org/abs/2411.10490"
+            }
+        ]
+    },
+    {
+        "title": "Composable Building Blocks for Controllable and Transparent Interactive AI Systems",
+        "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
+        "year": 2025,
+        "venue": {
+            "name": "3rd Workshop on Engineering Interactive Systems Embedding AI Technologies",
+            "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "workshop",
+            "url": "https://sites.google.com/view/eis-emb-aitech/"
+        },
+        "links": [
+            {
+                "type": "handle",
+                "url": "http://hdl.handle.net/1942/46276"
+            },
+            {
+                "type": "arxiv",
+                "url": "https://arxiv.org/abs/2506.02262"
+            }
+        ]
+    },
+    {
+        "title": "ECHO: Enhancing Conversational Explainable AI through Tool-Augmented Language Models",
+        "authors": ["svanbrabant", "geerlings", "groveloruiz", "dvanacken"],
+        "year": 2025,
+        "venue": {
+            "name": "Proceedings of the ACM on Human-Computer Interaction",
+            "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "journal",
+            "url": "https://eics.acm.org/2025/"
+        },
+        "links": [
+            {
+                "type": "doi",
+                "url": "https://doi.org/10.1145/3734191"
+            },
+            {
+                "type": "handle",
+                "url": "http://hdl.handle.net/1942/46344"
+            }
+        ]
+    },
+    {
+        "title": "INSIGHT: Bridging the Student-Teacher Gap in Times of Large Language Models",
+        "authors": ["jthys", "svanbrabant", "dvanacken", "groveloruiz"],
+        "year": 2025,
+        "venue": {
+            "name": "D-SAIL Workshop - Transformative Curriculum Design: Digitalisation, Sustainability, and AI Literacy for 21st Century Learning",
+            "parent": "The 26th International Conference on Artificial Intelligence in Education",
+            "short": "AIED",
+            "type": "workshop",
+            "url": "https://d-sail.itd.cnr.it/"
+        },
+        "links": [
+            {
+                "type": "handle",
+                "url": "http://hdl.handle.net/1942/46276"
+            },
+            {
+                "type": "arxiv",
+                "url": "https://arxiv.org/abs/2506.02262"
+            }
+        ]
+    }
+]
