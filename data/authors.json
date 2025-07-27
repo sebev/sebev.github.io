@@ -1,0 +1,108 @@
+{
+	"dvanacken": {
+		"firstName": "Davy",
+		"lastName": "Vanacken",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0000-0001-8436-5119"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/davy-vanacken"
+			}
+		]
+	},
+	"geerlings": {
+		"firstName": "Gilles",
+		"lastName": "Eerlings",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0009-0005-7765-6774"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/gilles-eerlings"
+			}
+		]
+	},
+	"groveloruiz": {
+		"firstName": "Gustavo",
+		"lastName": "Rovelo Ruiz",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0000-0001-7580-8950"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/gustavo-roveloruiz"
+			}
+		]
+	},
+	"jliesenborgs": {
+		"firstName": "Jori",
+		"lastName": "Liesenborgs",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0000-0002-3648-8031"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/jori-liesenborgs"
+			}
+		]
+	},
+	"jthys": {
+		"firstName": "Jarne",
+		"lastName": "Thys",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0009-0005-9348-7405"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/jarne-thys"
+			}
+		]
+	},
+	"kluyten": {
+		"firstName": "Kris",
+		"lastName": "Luyten",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0000-0002-4194-1101"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/kris-luyten"
+			}
+		]
+	},
+	"svanbrabant": {
+		"firstName": "Sebe",
+		"lastName": "Vanbrabant",
+		"links": [
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0009-0001-7996-6048"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/sebev"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/SebeV-1849168"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/sebe-vanbrabant"
+			}
+		]
+	}
+}
