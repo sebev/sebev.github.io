@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Development of an AI-based prototype that supports students and teaching staff with exercises",
+        "student": "Jarne Thys",
+        "type": "master",
+        "faculty": "iiw",
+        "start": "2023",
+        "end": "2024"
+    },
+    {
+        "title": "Enhancing user comprehension in smart homes: A layered data visualization approach",
+        "student": "Seppe Vandenberk",
+        "type": "bachelor",
+        "faculty": "iiw",
+        "start": "2024",
+        "end": "2024"
+    },
+    {
+        "title": "ASBot: Enhancing spondylitis management with AI-driven personalized chatbot interventions",
+        "student": "Serena Fillée",
+        "type": "bachelor",
+        "faculty": "wet",
+        "start": "2024",
+        "end": "2024"
+    },
+    {
+        "title": "AI-based web application for data visualization and analysis of charging infrastructure for electric vehicles",
+        "student": "Jenthe Lowist",
+        "type": "master",
+        "faculty": "iiw",
+        "start": "2024",
+        "end": "2024"
+    },
+    {
+        "title": "PERSSISTANT: A Progress Estimation System to Personalize Learning Trajectories",
+        "student": "Tijl Elens",
+        "type": "master",
+        "faculty": "wet",
+        "start": "2023",
+        "end": "2024"
+    },
+    {
+        "title": "An interactive dashboard for model comparison and selection with a predefined model set",
+        "student": "Daan Hollands",
+        "type": "bachelor",
+        "faculty": "iiw",
+        "start": "2025",
+        "end": "2025"
+    },
+    {
+        "title": "Combining solar forecasting and dynamic pricing in cost-effective explainable home energy scheduling",
+        "student": "Seppe De Munck",
+        "type": "bachelor",
+        "faculty": "iiw",
+        "start": "2025",
+        "end": "2025"
+    },
+    {
+        "title": "Bridging communication barriers: AI in deaf-hearing interactions within sheltered workplaces",
+        "student": "Nordin Ben-Al-Lal",
+        "type": "master",
+        "faculty": "iiw",
+        "start": "2025",
+        "end": "2025"
+    },
+    {
+        "title": "Find By Idea: Interpreting AI with training sample proximity in embedding space",
+        "student": "Joren Martens",
+        "type": "master",
+        "faculty": "wet",
+        "start": "2024",
+        "end": "2025"
+    }
+]

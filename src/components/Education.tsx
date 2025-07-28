@@ -11,6 +11,7 @@ import {
 	Box,
 	Button
 } from "@mui/material";
+import { CardDateRange } from "./CardDateRange";
 
 type Props = {
 	edu: IEducation;
@@ -30,15 +31,7 @@ export function Education({ edu, authors }: Props) {
                             {edu.institution} - {edu.faculty}
                         </Typography>
 					</Box>
-					<Box
-						minWidth={50}
-						textAlign="right"
-						color="text.secondary"
-						fontWeight="medium"
-						fontSize="1rem"
-					>
-						{new Date(edu.start).getFullYear()} - {new Date(edu.end).getFullYear()}
-					</Box>
+					<CardDateRange startYear={new Date(edu.start).getFullYear()} endYear={new Date(edu.end).getFullYear()} />
 				</Stack>
 			</CardContent>
 		</Card>

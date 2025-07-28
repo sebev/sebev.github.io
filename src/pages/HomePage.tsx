@@ -1,10 +1,13 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link } from "@mui/material";
+import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link, Card, CardContent } from "@mui/material";
 import { Publication } from "../components/Publication";
 import { Education } from "../components/Education"
 import { IAuthor } from "../types/author";
 import { IPublication } from "../types/publication"
 import { IEducation } from "../types/education"
+import { IThesis } from "../types/thesis";
+import { ICourse } from "../types/course";
+import { CardDateRange } from "../components/CardDateRange";
 
 const iconMap: Record<string, string> = {
     uhasselt: "https://www.uhasselt.be/media/ipqjpjbk/favicon_uhasselt.jpg?width=32&height=32",
@@ -18,6 +21,8 @@ function HomePage() {
     const [publications, setPublications] = useState<IPublication[]>([]);
     const [education, setEducation] = useState<IEducation[]>([]);
     const [authors, setAuthors] = useState<Record<string, IAuthor>>({});
+    const [theses, setTheses] = useState<IThesis[]>([]);
+    const [courses, setCourses] = useState<ICourse[]>([]);
     const [loading, setLoading] = useState(true);
     const [sortDescending, setSortDescending] = useState(true);
 
@@ -32,10 +37,12 @@ function HomePage() {
 
     useEffect(() => {
         async function loadData() {
-            const [pubRes, eduRes, authRes] = await Promise.all([
+            const [pubRes, eduRes, authRes, thesesRes, coursesRes] = await Promise.all([
                 fetch("/data/publications.json"),
                 fetch("/data/education.json"),
                 fetch("/data/authors.json"),
+                fetch("/data/theses.json"),
+                fetch("/data/courses.json")
             ]);
             const pubs = await pubRes.json();
             const edus = await eduRes.json();
@@ -43,9 +50,13 @@ function HomePage() {
                 return new Date(b.start).getTime() - new Date(a.start).getTime();
             })
             const auths = await authRes.json();
+            const theses = await thesesRes.json();
+            const courses = await coursesRes.json();
             setPublications(pubs);
             setEducation(edus);
             setAuthors(auths);
+            setTheses(theses.reverse());
+            setCourses(courses);
             setLoading(false);
         }
         loadData();
@@ -69,7 +80,7 @@ function HomePage() {
     return (
         <Container maxWidth="md" sx={{ py: 4 }}>
             <Stack direction={"column"} spacing={4}>
-                <Stack direction={"row"} spacing={2}>
+                <Stack direction={"row"} spacing={4}>
                     <Stack direction={"column"} spacing={2}>
                         <Stack direction={"row"} spacing={2} alignItems={"stretch"}>
                             <Avatar
@@ -91,10 +102,22 @@ function HomePage() {
                                         href={"https://www.uhasselt.be/en"}
                                         target="_blank"
                                         rel="noopener"
+                                        underline="none"
+                                        sx={{
+                                            '&:hover': {
+                                                textDecoration: 'underline',
+                                            },
+                                        }}
                                     >Hasselt University</Link>, <Link
                                         href={"https://www.uhasselt.be/en/instituten-en/digitalfuturelab"}
                                         target="_blank"
                                         rel="noopener"
+                                        underline="none"
+                                        sx={{
+                                            '&:hover': {
+                                                textDecoration: 'underline',
+                                            },
+                                        }}
                                     >Digital Future Lab</Link>
                                 </Typography>
                                 <Typography variant="subtitle2" color="text.secondary" gutterBottom>
@@ -102,19 +125,34 @@ function HomePage() {
                                         href={"https://www.uhasselt.be/en/instituten-en/expertise-centre-for-digital-media/research/intelligible-interactive-systems"}
                                         target="_blank"
                                         rel="noopener"
+                                        underline="none"
+                                        sx={{
+                                            '&:hover': {
+                                                textDecoration: 'underline',
+                                            },
+                                        }}
                                     >Intelligible Interactive Systems</Link> Research Unit and <Link
                                         href={"https://www.flandersmake.be/en"}
                                         target="_blank"
                                         rel="noopener"
+                                        underline="none"
+                                        sx={{
+                                            '&:hover': {
+                                                textDecoration: 'underline',
+                                            },
+                                        }}
                                     >Flanders Make</Link>
                                 </Typography>
                             </Box>
                         </Stack>
-                        <Typography variant="body1" color="text.primary">
-                            My research interests are at the intersection of human-computer interaction and (generative) AI.
-                            More specifically, I focus on explainable AI (XAI), and using generative AI and intelligible user interfaces to improve AI understanding towards different users.
-                            My current research investigates the role and benefits of Large Language Models and Variational Autoencoders in XAI.
+                        <Typography variant="body1" color="text.secondary" align="justify">
+                            My research interests are at the intersection of human-computer interaction and (generative) AI, within the context of explainable AI (XAI).
+                            I investigate how generative models and intelligible user interfaces can improve AI understanding for various users.
+                            Currently, I am exploring the roles and benefits of both Large Language Models and Variational Autoencoders in facilitating interaction with other AI systems.
                         </Typography>
+                        {/* <Typography variant="body1" color="text.secondary" align="justify">
+                           
+                        </Typography> */}
                     </Stack>
                     <Stack direction={"column"} spacing={1}>
                         {authors["svanbrabant"].links.map((x, i) => {
@@ -129,9 +167,9 @@ function HomePage() {
                                     sx={{ display: "inline-flex", alignItems: "center" }}
                                 >
                                     <Avatar
-                                    src={iconUrl}
-                                    alt={x.type}
-                                    sx={{ width: 24, height: 24 }}
+                                        src={iconUrl}
+                                        alt={x.type}
+                                        sx={{ width: 24, height: 24 }}
                                     />
                                 </Link>
                             );
@@ -165,6 +203,64 @@ function HomePage() {
 
                     {sortedPubs.map((pub) => (
                         <Publication key={pub.title} pub={pub} authors={authors} />
+                    ))}
+                </Stack>
+
+                <Divider />
+
+                <Stack direction={"column"} spacing={2}>
+                    <Typography variant="h5">Thesis Supervision</Typography>
+
+                    {theses.map((thesis) => (
+                        <Card variant="outlined">
+                            <CardContent>
+                                <Stack direction="row" justifyContent="space-between" spacing={2}>
+                                    <Box>
+                                        <Typography variant="subtitle1" fontWeight={600}>
+                                            {thesis.title}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {thesis.student}, {thesis.type}'s thesis
+                                        </Typography>
+                                    </Box>
+                                    {/* Pass end year twice instead, inconsistent range is more confusing than helpful */}
+                                    <CardDateRange startYear={new Date(thesis.end).getFullYear()} endYear={new Date(thesis.end).getFullYear()} />
+                                </Stack>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Stack>
+
+                <Divider />
+
+                <Stack direction={"column"} spacing={2}>
+                    <Typography variant="h5">Courses</Typography>
+
+                    {courses.map((course) => (
+                        <Card variant="outlined">
+                            <CardContent>
+                                <Stack direction="row" justifyContent="space-between" spacing={2}>
+                                    <Box>
+                                        <Typography variant="subtitle1" fontWeight={600}>
+                                            <Link
+                                                href={course.url}
+                                                target="_blank"
+                                                rel="noopener"
+                                                underline="none"
+                                                sx={{
+                                                    '&:hover': {
+                                                        textDecoration: 'underline',
+                                                    },
+                                                }}
+                                            >
+                                                {course.title}
+                                            </Link>
+                                        </Typography>
+                                    </Box>
+                                    <CardDateRange startYear={new Date(course.start).getFullYear()} endYear={new Date(course.end).getFullYear()} />
+                                </Stack>
+                            </CardContent>
+                        </Card>
                     ))}
                 </Stack>
             </Stack>

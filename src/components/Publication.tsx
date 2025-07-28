@@ -35,7 +35,7 @@ export function Publication({ pub, authors }: Props) {
 						sx={{
 							textDecoration: 'none',
 							'&:hover': {
-							textDecoration: 'underline',
+								textDecoration: 'underline',
 							},
 						}}
 					>
