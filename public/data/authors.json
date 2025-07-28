@@ -9,6 +9,10 @@
 				"url": "https://orcid.org/0000-0001-8436-5119"
 			},
 			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=gIEnmpYAAAAJ"
+			},
+			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/davy-vanacken"
 			}
@@ -21,6 +25,10 @@
 			{
 				"type": "orcid",
 				"url": "https://orcid.org/0009-0005-7765-6774"
+			},
+			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=4tD_uWkAAAAJ"
 			},
 			{
 				"type": "uhasselt",
@@ -38,6 +46,10 @@
 				"url": "https://orcid.org/0000-0001-7580-8950"
 			},
 			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=Za5scZoAAAAJ"
+			},
+			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/gustavo-roveloruiz"
 			}
@@ -51,6 +63,10 @@
 			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0002-3648-8031"
+			},
+			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=wB22A4sAAAAJ"
 			},
 			{
 				"type": "uhasselt",
@@ -67,6 +83,10 @@
 				"url": "https://orcid.org/0009-0005-9348-7405"
 			},
 			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=vYl-iywAAAAJ"
+			},
+			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/jarne-thys"
 			}
@@ -80,6 +100,10 @@
 			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0002-4194-1101"
+			},
+			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=k3i997gAAAAJ"
 			},
 			{
 				"type": "uhasselt",
@@ -110,16 +134,24 @@
 				"url": "https://orcid.org/0009-0001-7996-6048"
 			},
 			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=CHuVofAAAAAJ"
+			},
+			{
+				"type": "researchgate",
+				"url": "https://www.researchgate.net/profile/Sebe-Vanbrabant"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/sebe-vanbrabant"
+			},
+			{
 				"type": "github",
 				"url": "https://github.com/sebev"
 			},
 			{
 				"type": "github",
 				"url": "https://github.com/SebeV-1849168"
-			},
-			{
-				"type": "uhasselt",
-				"url": "https://www.uhasselt.be/en/who-is-who/sebe-vanbrabant"
 			}
 		]
 	}
