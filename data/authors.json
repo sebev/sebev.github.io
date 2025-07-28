@@ -2,6 +2,7 @@
 	"dvanacken": {
 		"firstName": "Davy",
 		"lastName": "Vanacken",
+		"prefix": "prof. dr.",
 		"links": [
 			{
 				"type": "orcid",
@@ -30,6 +31,7 @@
 	"groveloruiz": {
 		"firstName": "Gustavo",
 		"lastName": "Rovelo Ruiz",
+		"prefix": "prof. dr.",
 		"links": [
 			{
 				"type": "orcid",
@@ -44,6 +46,7 @@
 	"jliesenborgs": {
 		"firstName": "Jori",
 		"lastName": "Liesenborgs",
+		"prefix": "prof. dr.",
 		"links": [
 			{
 				"type": "orcid",
@@ -72,6 +75,7 @@
 	"kluyten": {
 		"firstName": "Kris",
 		"lastName": "Luyten",
+		"prefix": "prof. dr.",
 		"links": [
 			{
 				"type": "orcid",
