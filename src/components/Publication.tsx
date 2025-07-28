@@ -11,6 +11,7 @@ import {
 	Box,
 	Button
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom"
 
 type Props = {
 	pub: IPublication;
@@ -26,7 +27,20 @@ export function Publication({ pub, authors }: Props) {
 		return (
 			<React.Fragment key={id}>
 				<Box component="span" fontWeight={isMe ? "bold" : "normal"}>
-					{fullName}
+					<Link
+						component={RouterLink}
+						to={`/author/${id}`}
+						color="inherit"
+						underline="none"
+						sx={{
+							textDecoration: 'none',
+							'&:hover': {
+							textDecoration: 'underline',
+							},
+						}}
+					>
+						{fullName}
+					</Link>
 				</Box>
 				{orcidLink && (
 					<Tooltip title="View ORCID profile">
@@ -40,13 +54,13 @@ export function Publication({ pub, authors }: Props) {
 								alignItems: "center",
 							}}
 						>
-						<img
-							src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png"
-							alt="ORCID iD"
-							width={10}
-							height={10}
-							style={{ verticalAlign: "middle" }}
-						/>
+							<img
+								src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png"
+								alt="ORCID iD"
+								width={10}
+								height={10}
+								style={{ verticalAlign: "middle" }}
+							/>
 						</Link>
 					</Tooltip>
 				)}
