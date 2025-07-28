@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link, Card, CardContent } from "@mui/material";
+import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link, Card, CardContent, IconButton, Tooltip } from "@mui/material";
 import { Publication } from "../components/Publication";
 import { Education } from "../components/Education"
 import { IAuthor } from "../types/author";
@@ -15,7 +15,16 @@ const iconMap: Record<string, string> = {
     github: "https://github.githubassets.com/favicons/favicon.png",
     scholar: "https://scholar.google.com/favicon.ico",
     researchgate: "https://c5.rgstatic.net/m/42199702882742/images/favicon/favicon-32x32.png",
+    linkedin: "https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
 };
+
+const tooltipMap: Record<string, string> = {
+    uhasselt: "Hasselt Univserity",
+    orcid: "ORCID",
+    github: "GitHub",
+    scholar: "Google Scholar",
+    linkedin: "LinkedIn",
+}
 
 function HomePage() {
     const [publications, setPublications] = useState<IPublication[]>([]);
@@ -154,24 +163,28 @@ function HomePage() {
                            
                         </Typography> */}
                     </Stack>
-                    <Stack direction={"column"} spacing={1}>
+                    <Stack direction={"column"} spacing={0}>
                         {authors["svanbrabant"].links.map((x, i) => {
+                            if (x.type === "uhasselt") return null;
                             const iconUrl = iconMap[x.type];
                             if (!iconUrl) return null;
+
                             return (
-                                <Link
-                                    key={i}
-                                    href={x.url}
-                                    target="_blank"
-                                    rel="noopener"
-                                    sx={{ display: "inline-flex", alignItems: "center" }}
-                                >
-                                    <Avatar
-                                        src={iconUrl}
-                                        alt={x.type}
-                                        sx={{ width: 24, height: 24 }}
-                                    />
-                                </Link>
+                                <Tooltip key={i} title={tooltipMap[x.type]} placement={"right"}>
+                                    <IconButton
+                                        component="a"
+                                        href={x.url}
+                                        target="_blank"
+                                        rel="noopener"
+                                        sx={{ display: "inline-flex", alignItems: "center" }}
+                                    >
+                                        <Avatar
+                                            src={iconUrl}
+                                            alt={x.type}
+                                            sx={{ width: 22, height: 22 }}
+                                        />
+                                    </IconButton>
+                                </Tooltip>
                             );
                         })}
                     </Stack>

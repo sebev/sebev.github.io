@@ -130,6 +130,10 @@
 		"lastName": "Vanbrabant",
 		"links": [
 			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/sebev"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0009-0001-7996-6048"
 			},

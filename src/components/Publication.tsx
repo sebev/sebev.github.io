@@ -97,6 +97,12 @@ export function Publication({ pub, authors }: Props) {
 										href={pub.venue.url}
 										target="_blank"
 										rel="noopener"
+										underline="none"
+										sx={{
+											'&:hover': {
+												textDecoration: 'underline',
+											},
+										}}
 									>
 										{pub.venue.short} - {pub.venue.type.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}
 									</Link>
