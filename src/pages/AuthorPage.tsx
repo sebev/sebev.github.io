@@ -33,7 +33,7 @@ function AuthorPage() {
 			.then((data: IPublication[]) => {
 				setPublications(data.filter(x => x.authors.includes(id)).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()));
 			});
-	}, [id]);
+	}, [id, navigate]);
 
 	if (!id) return <Typography>Invalid author id.</Typography>
 	if (!author) return <Typography>Author not found.</Typography>;

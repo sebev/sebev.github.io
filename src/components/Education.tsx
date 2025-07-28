@@ -1,16 +1,11 @@
-import React from "react";
 import { IAuthor } from "../types/author";
 import { IEducation } from "../types/education"
 import {
 	Card,
 	CardContent,
 	Typography,
-	Link,
 	Stack,
-	Tooltip,
-	Box,
-	Button
-} from "@mui/material";
+	Box} from "@mui/material";
 import { CardDateRange } from "./CardDateRange";
 
 type Props = {
