@@ -23,6 +23,7 @@ const tooltipMap: Record<string, string> = {
     orcid: "ORCID",
     github: "GitHub",
     scholar: "Google Scholar",
+    researchgate: "ResearchGate",
     linkedin: "LinkedIn",
 }
 
@@ -216,6 +217,38 @@ function HomePage() {
 
                     {sortedPubs.map((pub) => (
                         <Publication key={pub.title} pub={pub} authors={authors} />
+                    ))}
+                </Stack>
+
+                <Divider />
+
+                <Stack direction={"column"} spacing={2}>
+                    <Typography variant="h5">Presentations</Typography>
+
+                    {publications.filter((x) => x.presented).reverse().map((publication) => (
+                        <Card variant="outlined">
+                            <CardContent>
+                                <Stack direction="row" justifyContent="space-between" spacing={2}>
+                                    <Box>
+                                        <Typography variant="subtitle1" fontWeight={600}>
+                                            {publication.title}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {publication.venue.parent} ({publication.venue.short})
+                                        </Typography>
+                                    </Box>
+                                    <Box
+                                        minWidth={100}
+                                        textAlign="right"
+                                        color="text.secondary"
+                                        fontWeight="medium"
+                                        fontSize="1rem"
+                                    >
+                                        {new Date(publication.date).toLocaleDateString()}
+                                    </Box>
+                                </Stack>
+                            </CardContent>
+                        </Card>
                     ))}
                 </Stack>
 

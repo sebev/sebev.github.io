@@ -78,6 +78,7 @@
         "title": "Composable Building Blocks for Controllable and Transparent Interactive AI Systems",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
         "date": "2025-06-24",
+        "presented": true,
         "venue": {
             "name": "3rd Workshop on Engineering Interactive Systems Embedding AI Technologies",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -100,6 +101,7 @@
         "title": "ECHO: Enhancing Conversational Explainable AI through Tool-Augmented Language Models",
         "authors": ["svanbrabant", "geerlings", "groveloruiz", "dvanacken"],
         "date": "2025-06-27",
+        "presented": true,
         "venue": {
             "name": "Proceedings of the ACM on Human-Computer Interaction",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
