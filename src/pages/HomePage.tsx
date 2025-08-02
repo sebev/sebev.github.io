@@ -194,7 +194,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography variant="h5">Education</Typography>
+                    <Typography id="education" variant="h5">Education</Typography>
 
                     {education.map((edu) => (
                         <Education key={edu.title} edu={edu} authors={authors} />
@@ -205,7 +205,7 @@ function HomePage() {
 
                 <Stack direction={"column"} spacing={2}>
                     <Stack direction="row" justifyContent="space-between" alignItems="center" mb={2}>
-                        <Typography variant="h5">Publications</Typography>
+                        <Typography id="publications" variant="h5">Publications</Typography>
                         <Button
                             variant="outlined"
                             size="small"
@@ -223,7 +223,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography variant="h5">Presentations</Typography>
+                    <Typography id="presentations" variant="h5">Presentations</Typography>
 
                     {publications.filter((x) => x.presented).reverse().map((publication) => (
                         <Card variant="outlined">
@@ -255,7 +255,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography variant="h5">Thesis Supervision</Typography>
+                    <Typography id="thesis-supervision" variant="h5">Thesis Supervision</Typography>
 
                     {theses.map((thesis) => (
                         <Card variant="outlined">
@@ -280,7 +280,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography variant="h5">Courses</Typography>
+                    <Typography id="courses" variant="h5">Courses</Typography>
 
                     {courses.map((course) => (
                         <Card variant="outlined">

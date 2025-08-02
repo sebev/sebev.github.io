@@ -57,7 +57,8 @@
             "parent": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
             "short": "EICS",
             "type": "book-chapter",
-            "url": "https://sites.google.com/view/engineering-interactive-system/home"
+            "url": "https://sites.google.com/view/engineering-interactive-system/home",
+            "publisher": "Springer"
         },
         "links": [
             {
@@ -107,7 +108,8 @@
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
             "short": "EICS",
             "type": "journal",
-            "url": "https://eics.acm.org/2025/"
+            "url": "https://eics.acm.org/2025/",
+            "publisher": "ACM"
         },
         "links": [
             {
@@ -129,7 +131,8 @@
             "parent": "The 26th International Conference on Artificial Intelligence in Education",
             "short": "AIED",
             "type": "workshop",
-            "url": "https://d-sail.itd.cnr.it/"
+            "url": "https://d-sail.itd.cnr.it/",
+            "publisher": "CEUR-WS"
         },
         "links": [
             {

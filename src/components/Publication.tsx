@@ -91,7 +91,17 @@ export function Publication({ pub, authors }: Props) {
 						</Typography>
 
 						<Typography variant="body2" color="text.secondary">
-							{pub.venue.name} (
+							{pub.venue.name}
+							{pub.venue.publisher && (
+								<>
+									{", "}
+									<i>
+										{pub.venue.publisher}
+									</i>
+								</>
+							)}
+							{" "}
+							(
 								<Tooltip title={pub.venue.parent}>
 									<Link
 										href={pub.venue.url}

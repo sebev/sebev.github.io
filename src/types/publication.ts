@@ -9,6 +9,7 @@ export type IPublication = {
         short: string;
         type: "journal" | "conference" | "workshop" | "book-chapter";
         url: string;
+        publisher?: string;
     };
     links: {
         type: string;
