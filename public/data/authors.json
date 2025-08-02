@@ -5,6 +5,10 @@
 		"prefix": "prof. dr.",
 		"links": [
 			{
+				"type": "homepage",
+				"url": "https://research.edm.uhasselt.be/dvanacken/"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0001-8436-5119"
 			},
@@ -22,6 +26,10 @@
 		"firstName": "Gilles",
 		"lastName": "Eerlings",
 		"links": [
+			{
+				"type": "homepage",
+				"url": "https://gilleseerlings.github.io/website/"
+			},
 			{
 				"type": "orcid",
 				"url": "https://orcid.org/0009-0005-7765-6774"
@@ -42,6 +50,10 @@
 		"prefix": "prof. dr.",
 		"links": [
 			{
+				"type": "homepage",
+				"url": "https://www.gustavorovelo.net/"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0001-7580-8950"
 			},
@@ -61,6 +73,10 @@
 		"prefix": "prof. dr.",
 		"links": [
 			{
+				"type": "homepage",
+				"url": "https://research.edm.uhasselt.be/jori/page/Main/HomePage.html"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0002-3648-8031"
 			},
@@ -78,6 +94,10 @@
 		"firstName": "Jarne",
 		"lastName": "Thys",
 		"links": [
+			{
+				"type": "homepage",
+				"url": "https://jarnethys.com/"
+			},
 			{
 				"type": "orcid",
 				"url": "https://orcid.org/0009-0005-9348-7405"
@@ -97,6 +117,10 @@
 		"lastName": "Luyten",
 		"prefix": "prof. dr.",
 		"links": [
+			{
+				"type": "homepage",
+				"url": "https://krisluyten.net/"
+			},
 			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0002-4194-1101"
@@ -129,6 +153,10 @@
 		"firstName": "Sebe",
 		"lastName": "Vanbrabant",
 		"links": [
+			{
+				"type": "homepage",
+				"url": "https://sebev.github.io/"
+			},
 			{
 				"type": "linkedin",
 				"url": "https://www.linkedin.com/in/sebev"
