@@ -1,5 +1,5 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link, Card, CardContent, IconButton, Tooltip } from "@mui/material";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link, Card, CardContent, IconButton, Tooltip, useMediaQuery, useTheme } from "@mui/material";
 import { Publication } from "../components/Publication";
 import { Education } from "../components/Education"
 import { IAuthor } from "../types/author";
@@ -8,6 +8,8 @@ import { IEducation } from "../types/education"
 import { IThesis } from "../types/thesis";
 import { ICourse } from "../types/course";
 import { CardDateRange } from "../components/CardDateRange";
+
+const ICON_SIZE = 22;
 
 const iconMap: Record<string, string> = {
     uhasselt: "https://www.uhasselt.be/media/ipqjpjbk/favicon_uhasselt.jpg?width=32&height=32",
@@ -28,6 +30,9 @@ const tooltipMap: Record<string, string> = {
 }
 
 function HomePage() {
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+    
     const [publications, setPublications] = useState<IPublication[]>([]);
     const [education, setEducation] = useState<IEducation[]>([]);
     const [authors, setAuthors] = useState<Record<string, IAuthor>>({});
@@ -90,7 +95,11 @@ function HomePage() {
     return (
         <Container maxWidth="md" sx={{ py: 4 }}>
             <Stack direction={"column"} spacing={4}>
-                <Stack direction={"row"} spacing={4}>
+                <Stack
+                    direction={{ xs: "column", sm: "row" }} 
+                    spacing={4}
+                    alignItems={{ xs: "flex-start", sm: "stretch" }}
+                >
                     <Stack direction={"column"} spacing={2}>
                         <Stack direction={"row"} spacing={2} alignItems={"stretch"}>
                             <Avatar
@@ -164,14 +173,20 @@ function HomePage() {
                            
                         </Typography> */}
                     </Stack>
-                    <Stack direction={"column"} spacing={0}>
+                    <Stack
+                        direction={{ xs: "row", sm: "column" }}
+                        spacing={0}
+                        alignItems={{ xs: "center", sm: "stretch" }}
+                        justifyContent={{ xs: "center", sm: "flex-start" }}
+                        width={{ xs: "100%", sm: ICON_SIZE }}
+                    >
                         {authors["svanbrabant"].links.map((x, i) => {
                             if (x.type === "uhasselt") return null;
                             const iconUrl = iconMap[x.type];
                             if (!iconUrl) return null;
 
                             return (
-                                <Tooltip key={i} title={tooltipMap[x.type]} placement={"right"}>
+                                <Tooltip key={i} title={tooltipMap[x.type]} placement={isSmallScreen ? "bottom" : "right"}>
                                     <IconButton
                                         component="a"
                                         href={x.url}
@@ -182,7 +197,7 @@ function HomePage() {
                                         <Avatar
                                             src={iconUrl}
                                             alt={x.type}
-                                            sx={{ width: 22, height: 22 }}
+                                            sx={{ width: ICON_SIZE, height: ICON_SIZE }}
                                         />
                                     </IconButton>
                                 </Tooltip>
