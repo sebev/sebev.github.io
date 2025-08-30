@@ -117,7 +117,7 @@ function HomePage() {
                                     Sebe Vanbrabant
                                 </Typography>
                                 <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-                                    PhD Candidate at <Link
+                                    PhD Student at <Link
                                         href={"https://www.uhasselt.be/en"}
                                         target="_blank"
                                         rel="noopener"
@@ -167,7 +167,7 @@ function HomePage() {
                         <Typography variant="body1" color="text.secondary" align="justify">
                             My research interests are at the intersection of human-computer interaction and (generative) AI, within the context of explainable AI (XAI).
                             I investigate how generative models and intelligible user interfaces can improve AI understanding for various users.
-                            Currently, I am exploring the roles and benefits of both Large Language Models and Variational Autoencoders in facilitating interaction with other AI systems.
+                            Currently, I am exploring the benefits of using Large Language Models and/or Variational Autoencoders to explain other AI systems.
                         </Typography>
                         {/* <Typography variant="body1" color="text.secondary" align="justify">
                            
@@ -192,7 +192,7 @@ function HomePage() {
                                         href={x.url}
                                         target="_blank"
                                         rel="noopener"
-                                        sx={{ display: "inline-flex", alignItems: "center" }}
+                                        sx={{ display: "inline-flex", alignItems: "center", width: ICON_SIZE+10, height: ICON_SIZE+10 }}
                                     >
                                         <Avatar
                                             src={iconUrl}
