@@ -138,6 +138,10 @@
             {
                 "type": "arxiv",
                 "url": "https://arxiv.org/abs/2504.17677"
+            },
+            {
+                "type": "ceur-ws",
+                "url": "https://ceur-ws.org/Vol-4051/"
             }
         ]
     }
