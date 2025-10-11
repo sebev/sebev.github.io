@@ -113,10 +113,10 @@ function HomePage() {
                                 SV
                             </Avatar>
                             <Box ref={boxRef}>
-                                <Typography variant="h4" fontWeight={700} gutterBottom>
+                                <Typography variant="h4" component="h1" fontWeight={700} gutterBottom>
                                     Sebe Vanbrabant
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" gutterBottom>
+                                <Typography variant="subtitle1" component="h2" color="text.secondary" gutterBottom>
                                     PhD Student at <Link
                                         href={"https://www.uhasselt.be/en"}
                                         target="_blank"
@@ -139,7 +139,7 @@ function HomePage() {
                                         }}
                                     >Digital Future Lab</Link>
                                 </Typography>
-                                <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                                <Typography variant="subtitle2" component="h3" color="text.secondary" gutterBottom>
                                     Member of the <Link
                                         href={"https://www.uhasselt.be/en/instituten-en/expertise-centre-for-digital-media/research/intelligible-interactive-systems"}
                                         target="_blank"
