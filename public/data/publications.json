@@ -144,5 +144,24 @@
                 "url": "https://ceur-ws.org/Vol-4051/"
             }
         ]
+    },
+    {
+        "title": "MATCH: Engineering Transparent and Controllable Conversational XAI Systems through Composable Building Blocks",
+        "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
+        "date": "2026",
+        "venue": {
+            "name": "Engineering Interactive Computer Systems. EICS 2025 International Workshops",
+            "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "book-chapter",
+            "url": "https://sites.google.com/view/eis-emb-aitech/",
+            "publisher": "Springer"
+        },
+        "links": [
+            {
+                "type": "arxiv",
+                "url": "https://arxiv.org/abs/2511.22420"
+            }
+        ]
     }
 ]

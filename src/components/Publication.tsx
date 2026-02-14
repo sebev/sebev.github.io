@@ -26,7 +26,10 @@ export function Publication({ pub, authors }: Props) {
 
 		return (
 			<React.Fragment key={id}>
-				<Box component="span" fontWeight={isMe ? "bold" : "normal"}>
+				<Box
+					component="span"
+					fontWeight={isMe ? "bold" : "normal"}
+				>
 					<Link
 						component={RouterLink}
 						to={`/author/${id}`}
@@ -68,6 +71,8 @@ export function Publication({ pub, authors }: Props) {
 		);
 	};
 
+	const venueDisplayName = pub.venue.type.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+
 	return (
 		<Card variant="outlined">
 			<CardContent>
@@ -102,7 +107,7 @@ export function Publication({ pub, authors }: Props) {
 							)}
 							{" "}
 							(
-								<Tooltip title={pub.venue.parent}>
+								<Tooltip title={"Page of call leading to this " + pub.venue.short + " " + venueDisplayName}>
 									<Link
 										href={pub.venue.url}
 										target="_blank"
@@ -114,10 +119,14 @@ export function Publication({ pub, authors }: Props) {
 											},
 										}}
 									>
-										{pub.venue.short} - {pub.venue.type.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}
+										{venueDisplayName}
 									</Link>
 								</Tooltip>
 							)
+						</Typography>
+
+						<Typography variant="body2" color="text.secondary">
+							{pub.venue.parent} ({pub.venue.short})
 						</Typography>
 
 						<Stack direction="row" spacing={1} mt={1} flexWrap="wrap">
