@@ -70,5 +70,29 @@
         "faculty": "wet",
         "start": "2024",
         "end": "2025"
+    },
+    {
+        "title": "Transparent Multimodal Fabric Weave Detection: Fusing CNN, OCR, and Tactile Input with XAI",
+        "student": "Siebe Jonker",
+        "type": "bachelor",
+        "faculty": "iiw",
+        "start": "2026",
+        "end": "2026"
+    },
+    {
+        "title": "Interactive Exploration and Comparison of Multiplicious Model Sets via Explainable AI",
+        "student": "Tobe Nysmans",
+        "type": "bachelor",
+        "faculty": "iiw",
+        "start": "2026",
+        "end": "2026"
+    },
+    {
+        "title": "A Context-Aware Multimodal Assistant for Collaborative Assembly Tasks in Augmented Reality",
+        "student": "Vince Driesen",
+        "type": "master",
+        "faculty": "iiw",
+        "start": "2026",
+        "end": "2026"
     }
 ]

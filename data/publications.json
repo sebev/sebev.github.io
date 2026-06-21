@@ -108,7 +108,7 @@
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
             "short": "EICS",
             "type": "journal",
-            "url": "https://eics.acm.org/2025/",
+            "url": "https://eics.acm.org/2025/cfp.html",
             "publisher": "ACM"
         },
         "links": [
@@ -148,7 +148,7 @@
     {
         "title": "MATCH: Engineering Transparent and Controllable Conversational XAI Systems through Composable Building Blocks",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
-        "date": "2026",
+        "date": "2026-07-02",
         "venue": {
             "name": "Engineering Interactive Computer Systems. EICS 2025 International Workshops",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -159,8 +159,51 @@
         },
         "links": [
             {
+                "type": "doi",
+                "url": "https://doi.org/10.1007/978-3-032-26051-2_10"
+            },
+            {
                 "type": "arxiv",
                 "url": "https://arxiv.org/abs/2511.22420"
+            }
+        ]
+    },
+    {
+        "title": "From Embeddings to Exploration: Engineering Interactive Latent Space Visualizations for AI Model Sensemaking",
+        "authors": ["svanbrabant", "jthys", "geerlings", "kluyten", "groveloruiz", "dvanacken"],
+        "date": "2026-07-02",
+        "presented": true,
+        "venue": {
+            "name": "Proceedings of the ACM on Human-Computer Interaction",
+            "parent": "The 18th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "journal",
+            "url": "https://eics.acm.org/2026/cfp.html",
+            "publisher": "ACM"
+        },
+        "links": [
+            {
+                "type": "doi",
+                "url": "https://doi.org/10.1145/3816764"
+            }
+        ]
+    },
+    {
+        "title": "Personalized and Intelligible User Interfaces through Human-in-the-Loop Generative AI",
+        "authors": ["svanbrabant"],
+        "date": "2026-07-01",
+        "presented": true,
+        "venue": {
+            "name": "Doctoral Consortium",
+            "parent": "The 18th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+            "short": "EICS",
+            "type": "doctoral-consortium",
+            "url": "https://eics.acm.org/2026/dc.html"
+        },
+        "links": [
+            {
+                "type": "doi",
+                "url": "https://doi.org/10.1145/3816764"
             }
         ]
     }
