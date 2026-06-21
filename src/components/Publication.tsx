@@ -126,7 +126,7 @@ export function Publication({ pub, authors }: Props) {
 						</Typography>
 
 						<Typography variant="body2" color="text.secondary">
-							{pub.venue.parent} ({pub.venue.short})
+							📍 {pub.venue.short} - {pub.venue.parent}
 						</Typography>
 
 						<Stack direction="row" spacing={1} mt={1} flexWrap="wrap">

@@ -40,6 +40,7 @@ function HomePage() {
     const [courses, setCourses] = useState<ICourse[]>([]);
     const [loading, setLoading] = useState(true);
     const [sortDescending, setSortDescending] = useState(true);
+    const [showAllTheses, setShowAllTheses] = useState(false);
 
     const boxRef = useRef<HTMLDivElement>(null);
     const [avatarSize, setAvatarSize] = useState<number>(0);
@@ -49,6 +50,12 @@ function HomePage() {
             ? new Date(b.date).getTime() - new Date(a.date).getTime()
             : new Date(a.date).getTime() - new Date(b.date).getTime()
     );
+
+    const sortedTheses = [...theses].sort(
+        (a, b) => new Date(b.end).getTime() - new Date(a.end).getTime()
+    );
+
+    const displayedTheses = showAllTheses ? sortedTheses : sortedTheses.slice(0, 3);
 
     useEffect(() => {
         async function loadData() {
@@ -209,16 +216,6 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="education" variant="h5">Education</Typography>
-
-                    {education.map((edu) => (
-                        <Education key={edu.title} edu={edu} authors={authors} />
-                    ))}
-                </Stack>
-
-                <Divider />
-
-                <Stack direction={"column"} spacing={2}>
                     <Stack direction="row" justifyContent="space-between" alignItems="center" mb={2}>
                         <Typography id="publications" variant="h5">Publications</Typography>
                         <Button
@@ -236,11 +233,21 @@ function HomePage() {
                 </Stack>
 
                 <Divider />
+                
+                <Stack direction={"column"} spacing={2}>
+                    <Typography id="education" variant="h5">Education</Typography>
+
+                    {education.map((edu) => (
+                        <Education key={edu.title} edu={edu} authors={authors} />
+                    ))}
+                </Stack>
+
+                <Divider />
 
                 <Stack direction={"column"} spacing={2}>
                     <Typography id="presentations" variant="h5">Presentations</Typography>
 
-                    {publications.filter((x) => x.presented).reverse().map((publication) => (
+                    {publications.filter((x) => x.presented).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((publication) => (
                         <Card variant="outlined">
                             <CardContent>
                                 <Stack direction="row" justifyContent="space-between" spacing={2}>
@@ -249,7 +256,7 @@ function HomePage() {
                                             {publication.title}
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
-                                            {publication.venue.parent} ({publication.venue.short})
+                                            📍 {publication.venue.short} - {publication.venue.parent}
                                         </Typography>
                                     </Box>
                                     <Box
@@ -272,8 +279,11 @@ function HomePage() {
                 <Stack direction={"column"} spacing={2}>
                     <Typography id="thesis-supervision" variant="h5">Thesis Supervision</Typography>
 
-                    {theses.map((thesis) => (
-                        <Card variant="outlined">
+                    {displayedTheses.map((thesis) => (
+                        <Card
+                            key={`${thesis.student}-${thesis.title}`}
+                            variant="outlined"
+                        >
                             <CardContent>
                                 <Stack direction="row" justifyContent="space-between" spacing={2}>
                                     <Box>
@@ -290,6 +300,16 @@ function HomePage() {
                             </CardContent>
                         </Card>
                     ))}
+
+                    {/* Don't render all theses by default */}
+                    {theses.length > 5 && !showAllTheses && (
+                        <Button
+                            variant="outlined"
+                            onClick={() => setShowAllTheses(true)}
+                        >
+                            Show all {theses.length} theses
+                        </Button>
+                    )}
                 </Stack>
 
                 <Divider />
