@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link as RouterLink, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IAuthor } from "../types/author";
 import { Typography, Link, Stack, Container, Button, Divider, Box } from "@mui/material";
@@ -35,15 +35,21 @@ function AuthorPage() {
 			});
 	}, [id, navigate]);
 
+	useEffect(() => {
+		if (!id) return;
+		document.title = author ? `${author.firstName} ${author.lastName}` : "Author not found";
+	}, [id, author]);
+
 	if (!id) return <Typography>Invalid author id.</Typography>
 	if (!author) return <Typography>Author not found.</Typography>;
 
 	return (
 		<Container maxWidth="md" sx={{ py: 4 }}>
 			<Stack spacing={4}>
+				<Link component={RouterLink} to="/" underline="hover">← All publications</Link>
 				<Box>
 					<Stack spacing={2}>
-						<Typography variant="h4">
+						<Typography variant="h4" component="h1" fontWeight={700} gutterBottom>
 							{author.prefix} {author.firstName} {author.lastName.toLocaleUpperCase()}
 						</Typography>
 						<Stack direction={"row"} spacing={2}>

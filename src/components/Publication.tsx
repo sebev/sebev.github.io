@@ -9,7 +9,6 @@ import {
 	Stack,
 	Tooltip,
 	Box,
-	Button
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom"
 
@@ -21,7 +20,6 @@ type Props = {
 export function Publication({ pub, authors }: Props) {
 	const renderAuthor = (id: string, idx: number, author: IAuthor) => {
 		const fullName = `${author.firstName} ${author.lastName}`;
-		const orcidLink = author.links?.find((l) => l.type === "orcid")?.url;
 		const isMe = id === "svanbrabant";
 
 		return (
@@ -30,48 +28,11 @@ export function Publication({ pub, authors }: Props) {
 					component="span"
 					fontWeight={isMe ? "bold" : "normal"}
 				>
-					<Link
-						component={RouterLink}
-						to={`/author/${id}`}
-						color="inherit"
-						underline="none"
-						sx={{
-							textDecoration: 'none',
-							'&:hover': {
-								textDecoration: 'underline',
-							},
-						}}
-					>
-						{fullName}
-					</Link>
+					{fullName}
 				</Box>
-				{orcidLink && (
-					<Tooltip title="View ORCID profile">
-						<Link
-							href={orcidLink}
-							target="_blank"
-							rel="noopener"
-							sx={{
-								ml: 0.5,
-								display: "inline-flex",
-								alignItems: "center",
-							}}
-						>
-							<img
-								src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png"
-								alt="ORCID iD"
-								width={10}
-								height={10}
-								style={{ verticalAlign: "middle" }}
-							/>
-						</Link>
-					</Tooltip>
-				)}
 			</React.Fragment>
 		);
 	};
-
-	const venueDisplayName = pub.venue.type.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 
 	return (
 		<Card variant="outlined">
@@ -79,7 +40,9 @@ export function Publication({ pub, authors }: Props) {
 				<Stack direction="row" justifyContent="space-between" spacing={2}>
 					<Box>
 						<Typography variant="subtitle1" fontWeight={600}>
-							{pub.title}
+							<Link component={RouterLink} to={`/publication/${pub.key}`} color="inherit" underline="hover">
+								{pub.title}
+							</Link>
 						</Typography>
 						
 						<Typography variant="body2" color="text.secondary">
@@ -89,66 +52,15 @@ export function Publication({ pub, authors }: Props) {
 								return (
 									<React.Fragment key={id}>
 										{author ? renderAuthor(id, idx, author) : id}
-										{idx < pub.authors.length - 1 ? ", " : ""}
+										{idx < pub.authors.length - 1 ? " · " : ""}
 									</React.Fragment>
 								);
 							})}
 						</Typography>
 
 						<Typography variant="body2" color="text.secondary">
-							{pub.venue.name}
-							{pub.venue.publisher && (
-								<>
-									{", "}
-									<i>
-										{pub.venue.publisher}
-									</i>
-								</>
-							)}
-							{" "}
-							(
-								<Tooltip title={"Page of call leading to this " + pub.venue.short + " " + venueDisplayName}>
-									<Link
-										href={pub.venue.url}
-										target="_blank"
-										rel="noopener"
-										underline="none"
-										sx={{
-											'&:hover': {
-												textDecoration: 'underline',
-											},
-										}}
-									>
-										{venueDisplayName}
-									</Link>
-								</Tooltip>
-							)
+							{pub.venue.short} · {pub.venue.name}
 						</Typography>
-
-						<Typography variant="body2" color="text.secondary">
-							📍 {pub.venue.short} - {pub.venue.parent}
-						</Typography>
-
-						<Stack direction="row" spacing={1} mt={1} flexWrap="wrap">
-							{pub.links?.map((link, i) => (
-								<Link
-									key={i}
-									href={link.url}
-									target="_blank"
-									rel="noopener"
-									variant="body2"
-									underline="hover"
-									sx={{ mr: 2 }}
-								>
-									<Button
-										variant="outlined"
-										size="small"
-									>
-										{link.type.toUpperCase()}
-									</Button>
-								</Link>
-							))}
-						</Stack>
 					</Box>
 					<Box
 						minWidth={50}

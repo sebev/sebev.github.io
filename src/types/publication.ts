@@ -1,5 +1,7 @@
 export type IPublication = {
+    key: string;
     title: string;
+    abstract?: string;
     authors: string[];
     date: string;
     presented?: true;

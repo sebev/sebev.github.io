@@ -84,6 +84,12 @@ function HomePage() {
         loadData();
     }, []);
 
+    useEffect(() => {
+        if (!loading) {
+            document.title = "Sebe Vanbrabant";
+        }
+    }, [loading]);
+
     useLayoutEffect(() => {
         if (boxRef.current) {
             const height = boxRef.current.offsetHeight;
@@ -255,7 +261,7 @@ function HomePage() {
                                             {publication.title}
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
-                                            📍 {publication.venue.short} - {publication.venue.parent}
+                                            {publication.venue.short} · {publication.venue.parent}
                                         </Typography>
                                     </Box>
                                     <Box
@@ -276,7 +282,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="thesis-supervision" variant="h5">Thesis Supervision</Typography>
+                    <Typography id="thesis-supervision" variant="h5">Student Supervision</Typography>
 
                     {displayedTheses.map((thesis) => (
                         <Card
@@ -314,7 +320,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="courses" variant="h5">Courses</Typography>
+                    <Typography id="courses" variant="h5">Teaching</Typography>
 
                     {courses.map((course) => (
                         <Card variant="outlined">

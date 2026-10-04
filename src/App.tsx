@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { useEffect } from "react";
 import HomePage from "./pages/HomePage";
 import AuthorPage from "./pages/AuthorPage";
+import PublicationPage from "./pages/PublicationPage";
 
 function ScrollToHashElement() {
 	const { hash } = useLocation();
@@ -34,6 +35,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/author/:id" element={<AuthorPage />} />
+				<Route path="/publication/:key" element={<PublicationPage />} />
 			</Routes>
 		</Router>
 	);
