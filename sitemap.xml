@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-	<url>
-		<loc>https://sebev.github.io/</loc>
-	</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://sebev.github.io/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2021explainable/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2023notifications/</loc></url>
+  <url><loc>https://sebev.github.io/publication/luyten2024opportunities/</loc></url>
+  <url><loc>https://sebev.github.io/publication/eerlings2025aispectra/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2025composable/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2025echo/</loc></url>
+  <url><loc>https://sebev.github.io/publication/thys2025insight/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2026match/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2026from/</loc></url>
+  <url><loc>https://sebev.github.io/publication/vanbrabant2026personalized/</loc></url>
 </urlset>

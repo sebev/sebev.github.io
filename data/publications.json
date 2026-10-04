@@ -1,5 +1,6 @@
 [
     {
+        "key": "vanbrabant2021explainable",
         "title": "Explainable AI for Recommender Systems",
         "authors": ["svanbrabant", "rmenten", "dvanacken"],
         "date": "2021",
@@ -13,6 +14,7 @@
         "links": []
     },
     {
+        "key": "vanbrabant2023notifications",
         "title": "Notifications for Digital Assistants",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
         "date": "2023",
@@ -31,7 +33,9 @@
         ]
     },
     {
+        "key": "luyten2024opportunities",
         "title": "Opportunities and Challenges of Model Multiplicity in Interactive Software Systems",
+
         "authors": ["kluyten", "geerlings", "jliesenborgs", "groveloruiz", "svanbrabant", "dvanacken"],
         "date": "2024-06-25",
         "venue": {
@@ -49,7 +53,9 @@
         ]
     },
     {
+        "key": "eerlings2025aispectra",
         "title": "AI-Spectra: A Visual Dashboard for Model Multiplicity to Enhance Informed and Transparent Decision-Making",
+        "abstract": "We present an approach, AI-Spectra, to leverage model multiplicity for interactive systems. Model multiplicity means using slightly different AI models yielding equally valid outcomes or predictions for the same task, thus relying on many simultaneous \"expert advisors\" that can have different opinions. Dealing with multiple AI models that generate potentially divergent results for the same task is challenging for users to deal with. It helps users understand and identify AI models are not always correct and might differ, but it can also result in an information overload when being confronted with multiple results instead of one. AI-Spectra leverages model multiplicity by using a visual dashboard designed for conveying what AI models generate which results while minimizing the cognitive effort to detect consensus among models and what type of models might have different opinions. We use a custom adaptation of Chernoff faces for AI-Spectra; Chernoff Bots. This visualization technique lets users quickly interpret complex, multivariate model configurations and compare predictions across multiple models. Our design is informed by building on established Human-AI Interaction guidelines and well know practices in information visualization. We validated our approach through a series of experiments training a wide variation of models with the MNIST dataset to perform number recognition. Our work contributes to the growing discourse on making AI systems more transparent, trustworthy, and effective through the strategic use of multiple models.",
         "authors": ["geerlings", "svanbrabant", "jliesenborgs", "groveloruiz", "dvanacken", "kluyten"],
         "date": "2025-05-30",
         "venue": {
@@ -76,7 +82,9 @@
         ]
     },
     {
+        "key": "vanbrabant2025composable",
         "title": "Composable Building Blocks for Controllable and Transparent Interactive AI Systems",
+        "abstract": "While the increased integration of AI technologies into interactive systems enables them to solve an equally increasing number of tasks, the black box problem of AI models continues to spread throughout the interactive system as a whole. Explainable AI (XAI) techniques can make AI models more accessible by employing post-hoc methods or transitioning to inherently interpretable models. While this makes individual AI models clearer, the overarching system architecture remains opaque. To this end, we propose an approach to represent interactive systems as sequences of structural building blocks, such as AI models and control mechanisms grounded in the literature. These can then be explained through accompanying visual building blocks, such as XAI techniques. The flow and APIs of the structural building blocks form an explicit overview of the system. This serves as a communication basis for both humans and automated agents like LLMs, aligning human and machine interpretability of AI models. We discuss a selection of building blocks and concretize our flow-based approach in an architecture and accompanying prototype interactive system.",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
         "date": "2025-06-24",
         "presented": true,
@@ -99,7 +107,9 @@
         ]
     },
     {
+        "key": "vanbrabant2025echo",
         "title": "ECHO: Enhancing Conversational Explainable AI through Tool-Augmented Language Models",
+        "abstract": "This paper introduces ECHO, an LLM-powered system framework to explore and interrogate the internals of AI models through tool-augmented language models. While traditional XAI methods typically offer a small and technical set of explanation types, ECHO advances the accessibility and usability of AI explanations through a conversational approach, combining LLMs with a collection of tools and a human-in-the-loop process. We identify various explanation types from the literature, for which we create a set of predefined tools for tabular data. Using a modular architecture, ECHO integrates these predefined tools with dynamically generated tools to interact with AI models, facilitating tailored explanations for a large variety of user queries. This paper details ECHO’s design, implementation, and use cases, demonstrating its capabilities in the context of a movie recommender, healthcare decision tree and neural network for educational classification.",
         "authors": ["svanbrabant", "geerlings", "groveloruiz", "dvanacken"],
         "date": "2025-06-27",
         "presented": true,
@@ -123,7 +133,9 @@
         ]
     },
     {
+        "key": "thys2025insight",
         "title": "INSIGHT: Bridging the Student-Teacher Gap in Times of Large Language Models",
+        "abstract": "The rise of AI, especially Large Language Models, presents challenges and opportunities to integrate such technology into the classroom. AI has the potential to revolutionize education by helping teaching staff with various tasks, such as personalizing their teaching methods, but it also raises concerns, for example, about the degradation of student-teacher interactions and user privacy. Based on interviews with teaching staff, this paper introduces INSIGHT, a proof of concept to combine various AI tools to assist teaching staff and students in the process of solving exercises. INSIGHT has a modular design that allows it to be integrated into various higher education courses. We analyze students' questions to an LLM by extracting keywords, which we use to dynamically build an FAQ from students' questions and provide new insights for the teaching staff to use for more personalized face-to-face support. Future work could build upon INSIGHT by using the collected data to provide adaptive learning and adjust content based on student progress and learning styles to offer a more interactive and inclusive learning experience.",
         "authors": ["jthys", "svanbrabant", "dvanacken", "groveloruiz"],
         "date": "2025-07-22",
         "venue": {
@@ -146,7 +158,9 @@
         ]
     },
     {
+        "key": "vanbrabant2026match",
         "title": "MATCH: Engineering Transparent and Controllable Conversational XAI Systems through Composable Building Blocks",
+        "abstract": "While the increased integration of AI technologies into interactive systems enables them to solve an increasing number of tasks, the black-box problem of AI models continues to spread throughout the interactive system as a whole. Explainable AI (XAI) techniques can make AI models more accessible by employing post-hoc methods or transitioning to inherently interpretable models. While this makes individual AI models clearer, the overarching system architecture remains opaque. This challenge not only pertains to standard XAI techniques but also to human examination and conversational XAI approaches that need access to model internals to interpret them correctly and completely. To this end, we propose conceptually representing such interactive systems as sequences of structural building blocks. These include the AI models themselves, as well as control mechanisms grounded in literature. The structural building blocks can then be explained through complementary explanatory building blocks, such as established XAI techniques like LIME and SHAP. The flow and APIs of the structural building blocks form an unambiguous overview of the underlying system, serving as a communication basis for both human and automated agents, thus aligning human and machine interpretability of the embedded AI models. In this paper, we present our flow-based approach and a selection of building blocks as MATCH: a framework for engineering Multi-Agent Transparent and Controllable Human-centered systems. This research contributes to the field of (conversational) XAI by facilitating the integration of interpretability into existing interactive systems.",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
         "date": "2026-07-02",
         "venue": {
@@ -169,7 +183,9 @@
         ]
     },
     {
+        "key": "vanbrabant2026from",
         "title": "From Embeddings to Exploration: Engineering Interactive Latent Space Visualizations for AI Model Sensemaking",
+        "abstract": "Machine learning systems are often inspected through 2D projections of high-dimensional representations using techniques such as t-SNE or UMAP. While these visualizations provide useful overviews of clustering and similarity, they are inherently static: they display only the existing data points and do not allow users to interactively explore a model’s decision space. We present an interactive exploration system — LAPEX— that uses a Variational Autoencoder (VAE) as a generative proxy over a model’s training distribution, turning the latent space into a navigable workspace for model sensemaking. Unlike static embeddings, the proxy provides an explicit decoding path from latent coordinates to inputs, enabling interaction patterns such as continuous sampling, interpolation between anchors, and region probing. We operationalize these capabilities through a set of interactive probes that augment a familiar scatter-plot overview with generative overlays for comparing transitions between classes and examining sparsely populated regions. A within-subject formative study (N = 16) comparing an interactive VAE-based method to a static t-SNE baseline shows that generative interaction substantially improves counterfactual reasoning and influences how users assess model behavior in sparse or uncertain regions, while static embeddings sometimes provide clearer boundary perception. From these findings, we derive concrete design guidelines and architectural considerations for engineering interactive AI model exploration systems using generative latent representations.",
         "authors": ["svanbrabant", "jthys", "geerlings", "kluyten", "groveloruiz", "dvanacken"],
         "date": "2026-07-02",
         "presented": true,
@@ -189,6 +205,7 @@
         ]
     },
     {
+        "key": "vanbrabant2026personalized",
         "title": "Personalized and Intelligible User Interfaces through Human-in-the-Loop Generative AI",
         "authors": ["svanbrabant"],
         "date": "2026-07-01",
