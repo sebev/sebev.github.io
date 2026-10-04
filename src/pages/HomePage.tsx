@@ -148,7 +148,7 @@ function HomePage() {
                                 </Typography>
                                 <Typography variant="subtitle2" component="h3" color="text.secondary" gutterBottom>
                                     Member of the <Link
-                                        href={"https://www.uhasselt.be/en/instituten-en/expertise-centre-for-digital-media/research/intelligible-interactive-systems"}
+                                        href={"https://www.uhasselt.be/en/instituten-en/digitalfuturelab/research/"}
                                         target="_blank"
                                         rel="noopener"
                                         underline="none"
@@ -172,13 +172,12 @@ function HomePage() {
                             </Box>
                         </Stack>
                         <Typography variant="body1" color="text.secondary" align="justify">
-                            My research interests are at the intersection of human-computer interaction and (generative) AI, within the context of explainable AI (XAI).
-                            I investigate how generative models and intelligible user interfaces can improve AI understanding for various users.
-                            Currently, I am exploring the benefits of using Large Language Models and/or Variational Autoencoders to explain other AI systems.
+                            My research interests are at the intersection of human-computer interaction (HCI) and (generative) AI, within the context of explainable AI (XAI).
+                            I investigate how generative models and intelligible user interfaces can help users better understand and interact with AI systems.
                         </Typography>
-                        {/* <Typography variant="body1" color="text.secondary" align="justify">
-                           
-                        </Typography> */}
+                        <Typography variant="body1" color="text.secondary" align="justify">
+                           Currently, I am broadening my scope from Conversational XAI to developing user interfaces that enable exploration and understanding of black-box AI models in an interactive manner.
+                        </Typography>
                     </Stack>
                     <Stack
                         direction={{ xs: "row", sm: "column" }}
