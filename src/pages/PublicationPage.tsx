@@ -101,7 +101,15 @@ function PublicationPage() {
 			<Stack spacing={3}>
 				<Link component={RouterLink} to="/" underline="hover">← All publications</Link>
 				<Box>
-					<Typography variant="h4" component="h1" fontWeight={700} gutterBottom>{publication.title}</Typography>
+					<Typography
+						variant="h4"
+						component="h1"
+						fontWeight={700}
+						gutterBottom
+					>
+						{publication.title}
+					</Typography>
+
 					<Typography color="text.secondary">
 						{publication.authors.map((id, idx) => {
 							const author = authors[id];
@@ -161,7 +169,14 @@ function PublicationPage() {
 					<Divider />
 					<Box>
 						<Typography variant="h6" component="h2" gutterBottom>Abstract</Typography>
-						<Typography color="text.secondary" sx={{ whiteSpace: "pre-line" }}>{publication.abstract}</Typography>
+						<Typography
+							color="text.secondary"
+							align="justify"
+							sx={{
+								whiteSpace: "pre-line"
+							}}>
+							{publication.abstract}
+						</Typography>
 					</Box>
 				</>}
 			</Stack>
