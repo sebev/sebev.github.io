@@ -222,7 +222,7 @@ function HomePage() {
 
                 <Stack direction={"column"} spacing={2}>
                     <Stack direction="row" justifyContent="space-between" alignItems="center" mb={2}>
-                        <Typography id="publications" variant="h5">Publications</Typography>
+                        <Typography id="publications" className="accent-title" variant="h5">Publications</Typography>
                         <Button
                             variant="outlined"
                             size="small"
@@ -240,7 +240,7 @@ function HomePage() {
                 <Divider />
                 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="education" variant="h5">Education</Typography>
+                    <Typography id="education" className="accent-title" variant="h5">Education</Typography>
 
                     {education.map((edu) => (
                         <Education key={edu.title} edu={edu} authors={authors} />
@@ -250,7 +250,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="presentations" variant="h5">Presentations</Typography>
+                    <Typography id="presentations" className="accent-title" variant="h5">Presentations</Typography>
 
                     {publications.filter((x) => x.presented).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((publication) => (
                         <Card variant="outlined">
@@ -282,7 +282,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="thesis-supervision" variant="h5">Student Supervision</Typography>
+                    <Typography id="thesis-supervision" className="accent-title" variant="h5">Student Supervision</Typography>
 
                     {displayedTheses.map((thesis) => (
                         <Card
@@ -320,7 +320,7 @@ function HomePage() {
                 <Divider />
 
                 <Stack direction={"column"} spacing={2}>
-                    <Typography id="courses" variant="h5">Teaching</Typography>
+                    <Typography id="courses" className="accent-title" variant="h5">Teaching</Typography>
 
                     {courses.map((course) => (
                         <Card variant="outlined">

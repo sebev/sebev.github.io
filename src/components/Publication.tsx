@@ -27,6 +27,7 @@ export function Publication({ pub, authors }: Props) {
 				<Box
 					component="span"
 					fontWeight={isMe ? "bold" : "normal"}
+					color={isMe ? "#00a6f4" : "inherit"}
 				>
 					{fullName}
 				</Box>

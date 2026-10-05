@@ -5,19 +5,19 @@ const theme = createTheme({
 	palette: {
 		mode: "light",
 		primary: {
-			main: "#46645d",
-			dark: "#304b45",
-			light: "#e7eeea",
+			main: "#00a6f4",
+			dark: "#0088c7",
+			light: "#e0f5ff",
 		},
 		background: {
-			default: "#f5f4ef",
-			paper: "#fbfaf7",
+			default: "#FAFAFA",
+			paper: "#FAFAFA",
 		},
 		text: {
 			primary: "#292e2b",
 			secondary: "#6e7671",
 		},
-		divider: "#e2e2da",
+		divider: "#E2E2E2",
 	},
 	typography: {
 		fontFamily: '"Inter", "Segoe UI", "Roboto", sans-serif',
@@ -33,12 +33,12 @@ const theme = createTheme({
 		MuiCssBaseline: {
 			styleOverrides: {
 				body: {
-					backgroundColor: "#f5f4ef",
+					backgroundColor: "#FAFAFA",
 					minHeight: "100vh",
 				},
 				"::selection": {
-					backgroundColor: "#dce7e1",
-					color: "#263d36",
+					backgroundColor: "#bfeaff",
+					color: "#005f8f",
 				},
 			},
 		},
@@ -49,13 +49,15 @@ const theme = createTheme({
 					paddingInline: 16,
 					transition: "background-color 160ms ease, border-color 160ms ease, transform 160ms ease",
 					"&:hover": { transform: "translateY(-1px)" },
+					"&.Mui-focusVisible": { outline: "2px solid #00a6f4", outlineOffset: 2 },
 				},
 				outlined: {
 					borderColor: "#cbd5cf",
 					backgroundColor: "rgba(255, 255, 255, 0.42)",
 					"&:hover": {
-						borderColor: "#91a69c",
-						backgroundColor: "#edf1ec",
+						borderColor: "#00a6f4",
+						backgroundColor: "#e0f5ff",
+						color: "#007eba",
 					},
 				},
 			},
@@ -64,7 +66,7 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					borderRadius: 14,
-					borderColor: "#e2e2da",
+					borderColor: "#E2E2E2",
 					backgroundColor: "rgba(255, 255, 255, 0.62)",
 					boxShadow: "0 1px 2px rgba(37, 48, 42, 0.025)",
 					transition: "border-color 160ms ease, background-color 160ms ease",
@@ -81,13 +83,14 @@ const theme = createTheme({
 			},
 		},
 		MuiDivider: {
-			styleOverrides: { root: { borderColor: "#e2e2da" } },
+			styleOverrides: { root: { borderColor: "#E2E2E2" } },
 		},
 		MuiLink: {
 			styleOverrides: {
 				root: {
 					textUnderlineOffset: "3px",
-					"&:hover": { color: "#304b45" },
+					color: "#007eba",
+					"&:hover": { color: "#005f8f" },
 				},
 			},
 		},
@@ -95,7 +98,7 @@ const theme = createTheme({
 			styleOverrides: {
 				root: {
 					color: "#63736b",
-					"&:hover": { backgroundColor: "#e8ece7", color: "#304b45" },
+					"&:hover": { backgroundColor: "#e0f5ff", color: "#0088c7" },
 				},
 			},
 		},
