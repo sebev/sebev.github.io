@@ -5,7 +5,8 @@ import {
 	CardContent,
 	Typography,
 	Stack,
-	Box} from "@mui/material";
+	Box
+} from "@mui/material";
 import { CardDateRange } from "./CardDateRange";
 
 type Props = {
