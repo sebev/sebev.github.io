@@ -28,7 +28,7 @@
 		"links": [
 			{
 				"type": "homepage",
-				"url": "https://gilleseerlings.github.io/website/"
+				"url": "https://gilleseerlings.be/"
 			},
 			{
 				"type": "orcid",
@@ -37,6 +37,10 @@
 			{
 				"type": "scholar",
 				"url": "https://scholar.google.com/citations?user=4tD_uWkAAAAJ"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/Gilles-Eerlings"
 			},
 			{
 				"type": "uhasselt",
@@ -144,8 +148,12 @@
 				"url": "https://orcid.org/0000-0003-2875-9812"
 			},
 			{
+				"type": "scholar",
+				"url": "https://scholar.google.com/citations?user=jkacKmgAAAAJ"
+			},
+			{
 				"type": "uhasselt",
-				"url": "https://www.uhasselt.be/en/who-is-who/raf-menten"
+				"url": "https://www.uhasselt.be/en/who-is-who/detail/raf-menten"
 			}
 		]
 	},

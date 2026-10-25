@@ -1,0 +1,56 @@
+[
+    {
+        "title": "AI-Spectra: A Visual Dashboard for Model Multiplicity to Enhance Informed and Transparent Decision-Making",
+        "date": "2025-04-24",
+        "venue": {
+            "short": "Research Day",
+            "parent": "Hasselt University"
+        },
+        "publicationKey": "eerlings2025aispectra"
+    },
+    {
+        "title": "Composable Building Blocks for Controllable and Transparent Interactive AI Systems",
+        "date": "2025-06-24",
+        "venue": {
+            "short": "EICS",
+            "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems"
+        },
+        "publicationKey": "vanbrabant2025composable"
+    },
+    {
+        "title": "ECHO: Enhancing Conversational Explainable AI through Tool-Augmented Language Models",
+        "date": "2025-06-27",
+        "venue": {
+            "short": "EICS",
+            "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems"
+        },
+        "publicationKey": "vanbrabant2025echo"
+    },
+    {
+        "title": "ECHO: Enhancing Conversational Explainable AI through Tool-Augmented Language Models",
+        "date": "2026-04-02",
+        "venue": {
+            "short": "Research Day",
+            "parent": "Hasselt University"
+        },
+        "publicationKey": "vanbrabant2025echo"
+    },
+    {
+        "title": "Personalized and Intelligible User Interfaces through Human-in-the-Loop Generative AI",
+        "date": "2026-07-01",
+        "venue": {
+            "short": "EICS",
+            "parent": "The 18th ACM SIGCHI Symposium on Engineering Interactive Computing Systems"
+        },
+        "publicationKey": "vanbrabant2026personalized"
+    },
+    {
+        "title": "From Embeddings to Exploration: Engineering Interactive Latent Space Visualizations for AI Model Sensemaking",
+        "date": "2026-07-02",
+        "venue": {
+            "short": "EICS",
+            "parent": "The 18th ACM SIGCHI Symposium on Engineering Interactive Computing Systems"
+        },
+        "publicationKey": "vanbrabant2026from"
+    }
+]

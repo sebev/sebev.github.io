@@ -87,7 +87,6 @@
         "abstract": "While the increased integration of AI technologies into interactive systems enables them to solve an equally increasing number of tasks, the black box problem of AI models continues to spread throughout the interactive system as a whole. Explainable AI (XAI) techniques can make AI models more accessible by employing post-hoc methods or transitioning to inherently interpretable models. While this makes individual AI models clearer, the overarching system architecture remains opaque. To this end, we propose an approach to represent interactive systems as sequences of structural building blocks, such as AI models and control mechanisms grounded in the literature. These can then be explained through accompanying visual building blocks, such as XAI techniques. The flow and APIs of the structural building blocks form an explicit overview of the system. This serves as a communication basis for both humans and automated agents like LLMs, aligning human and machine interpretability of AI models. We discuss a selection of building blocks and concretize our flow-based approach in an architecture and accompanying prototype interactive system.",
         "authors": ["svanbrabant", "groveloruiz", "dvanacken"],
         "date": "2025-06-24",
-        "presented": true,
         "venue": {
             "name": "3rd Workshop on Engineering Interactive Systems Embedding AI Technologies",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -112,7 +111,6 @@
         "abstract": "This paper introduces ECHO, an LLM-powered system framework to explore and interrogate the internals of AI models through tool-augmented language models. While traditional XAI methods typically offer a small and technical set of explanation types, ECHO advances the accessibility and usability of AI explanations through a conversational approach, combining LLMs with a collection of tools and a human-in-the-loop process. We identify various explanation types from the literature, for which we create a set of predefined tools for tabular data. Using a modular architecture, ECHO integrates these predefined tools with dynamically generated tools to interact with AI models, facilitating tailored explanations for a large variety of user queries. This paper details ECHO’s design, implementation, and use cases, demonstrating its capabilities in the context of a movie recommender, healthcare decision tree and neural network for educational classification.",
         "authors": ["svanbrabant", "geerlings", "groveloruiz", "dvanacken"],
         "date": "2025-06-27",
-        "presented": true,
         "venue": {
             "name": "Proceedings of the ACM on Human-Computer Interaction",
             "parent": "The 17th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -188,7 +186,6 @@
         "abstract": "Machine learning systems are often inspected through 2D projections of high-dimensional representations using techniques such as t-SNE or UMAP. While these visualizations provide useful overviews of clustering and similarity, they are inherently static: they display only the existing data points and do not allow users to interactively explore a model’s decision space. We present an interactive exploration system — LAPEX— that uses a Variational Autoencoder (VAE) as a generative proxy over a model’s training distribution, turning the latent space into a navigable workspace for model sensemaking. Unlike static embeddings, the proxy provides an explicit decoding path from latent coordinates to inputs, enabling interaction patterns such as continuous sampling, interpolation between anchors, and region probing. We operationalize these capabilities through a set of interactive probes that augment a familiar scatter-plot overview with generative overlays for comparing transitions between classes and examining sparsely populated regions. A within-subject formative study (N = 16) comparing an interactive VAE-based method to a static t-SNE baseline shows that generative interaction substantially improves counterfactual reasoning and influences how users assess model behavior in sparse or uncertain regions, while static embeddings sometimes provide clearer boundary perception. From these findings, we derive concrete design guidelines and architectural considerations for engineering interactive AI model exploration systems using generative latent representations.",
         "authors": ["svanbrabant", "jthys", "geerlings", "kluyten", "groveloruiz", "dvanacken"],
         "date": "2026-07-02",
-        "presented": true,
         "venue": {
             "name": "Proceedings of the ACM on Human-Computer Interaction",
             "parent": "The 18th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
@@ -209,7 +206,6 @@
         "title": "Personalized and Intelligible User Interfaces through Human-in-the-Loop Generative AI",
         "authors": ["svanbrabant"],
         "date": "2026-07-01",
-        "presented": true,
         "venue": {
             "name": "Doctoral Consortium",
             "parent": "The 18th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
