@@ -1,10 +1,10 @@
-import { Link as RouterLink, useParams } from "react-router-dom";
+import { Box, Button, Container, Divider, Link, Stack, Tooltip, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { IAuthor } from "../types/author";
-import { Typography, Link, Stack, Container, Button, Divider, Box } from "@mui/material";
-import { IPublication } from "../types/publication";
+import { Link as RouterLink, useNavigate, useParams } from "react-router-dom";
 import { Publication } from "../components/Publication";
-import { useNavigate } from "react-router-dom";
+import { socialLinkTooltips } from "../constants/socialLinkTooltips";
+import { IAuthor } from "../types/author";
+import { IPublication } from "../types/publication";
 
 function AuthorPage() {
 	const { id } = useParams<{ id: string }>();
@@ -55,14 +55,16 @@ function AuthorPage() {
 						<Stack direction={"row"} spacing={2}>
 							{author.links?.map((link, idx) => {
 								return (
-									<Link key={idx} href={link.url} target="_blank" rel="noopener">
-										<Button
-											variant="outlined"
-											size="small"
-										>
-											{link.type.toUpperCase()}
-										</Button>
-									</Link>
+									<Tooltip key={idx} title={socialLinkTooltips[link.type] ?? link.type}>
+										<Link href={link.url} target="_blank" rel="noopener">
+											<Button
+												variant="outlined"
+												size="small"
+											>
+												{socialLinkTooltips[link.type] ?? link.type.toUpperCase()}
+											</Button>
+										</Link>
+									</Tooltip>
 								);
 							})}
 						</Stack>

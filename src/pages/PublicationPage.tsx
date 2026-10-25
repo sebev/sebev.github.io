@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link as RouterLink, useParams } from "react-router-dom";
 import { Box, Button, Container, Divider, Link, Stack, Tooltip, Typography } from "@mui/material";
-import { IPublication } from "../types/publication";
+import React, { useEffect, useState } from "react";
+import { Link as RouterLink, useParams } from "react-router-dom";
 import { IAuthor } from "../types/author";
-import React from "react";
+import { IPublication } from "../types/publication";
 
 function PublicationPage() {
 	const { key } = useParams<{ key: string }>();

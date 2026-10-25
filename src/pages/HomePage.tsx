@@ -1,13 +1,14 @@
+import { Avatar, Box, Button, Card, CardContent, CircularProgress, Container, Divider, IconButton, Link, Stack, Tooltip, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { Container, Typography, Box, CircularProgress, Button, Stack, Divider, Avatar, Link, Card, CardContent, IconButton, Tooltip, useMediaQuery, useTheme } from "@mui/material";
-import { Publication } from "../components/Publication";
-import { Education } from "../components/Education"
-import { IAuthor } from "../types/author";
-import { IPublication } from "../types/publication"
-import { IEducation } from "../types/education"
-import { IThesis } from "../types/thesis";
-import { ICourse } from "../types/course";
 import { CardDateRange } from "../components/CardDateRange";
+import { Education } from "../components/Education";
+import { Publication } from "../components/Publication";
+import { socialLinkTooltips } from "../constants/socialLinkTooltips";
+import { IAuthor } from "../types/author";
+import { ICourse } from "../types/course";
+import { IEducation } from "../types/education";
+import { IPublication } from "../types/publication";
+import { IThesis } from "../types/thesis";
 
 const ICON_SIZE = 22;
 
@@ -19,15 +20,6 @@ const iconMap: Record<string, string> = {
     researchgate: "https://c5.rgstatic.net/m/42199702882742/images/favicon/favicon-32x32.png",
     linkedin: "https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
 };
-
-const tooltipMap: Record<string, string> = {
-    uhasselt: "Hasselt Univserity",
-    orcid: "ORCID",
-    github: "GitHub",
-    scholar: "Google Scholar",
-    researchgate: "ResearchGate",
-    linkedin: "LinkedIn",
-}
 
 function HomePage() {
     const theme = useTheme();
@@ -198,7 +190,7 @@ function HomePage() {
                             if (!iconUrl) return null;
 
                             return (
-                                <Tooltip key={i} title={tooltipMap[x.type]} placement={isSmallScreen ? "bottom" : "right"}>
+                                <Tooltip key={i} title={socialLinkTooltips[x.type]} placement={isSmallScreen ? "bottom" : "right"}>
                                     <IconButton
                                         component="a"
                                         href={x.url}
