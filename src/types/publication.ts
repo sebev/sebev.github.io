@@ -4,7 +4,6 @@ export type IPublication = {
     abstract?: string;
     authors: string[];
     date: string;
-    presented?: true;
     venue: {
         name: string;
         parent: string;

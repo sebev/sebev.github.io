@@ -7,6 +7,7 @@ import { socialLinkTooltips } from "../constants/socialLinkTooltips";
 import { IAuthor } from "../types/author";
 import { ICourse } from "../types/course";
 import { IEducation } from "../types/education";
+import { IPresentation } from "../types/presentation";
 import { IPublication } from "../types/publication";
 import { IThesis } from "../types/thesis";
 
@@ -25,6 +26,7 @@ function HomePage() {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
     
+    const [presentations, setPresentations] = useState<IPresentation[]>([]);
     const [publications, setPublications] = useState<IPublication[]>([]);
     const [education, setEducation] = useState<IEducation[]>([]);
     const [authors, setAuthors] = useState<Record<string, IAuthor>>({});
@@ -51,13 +53,15 @@ function HomePage() {
 
     useEffect(() => {
         async function loadData() {
-            const [pubRes, eduRes, authRes, thesesRes, coursesRes] = await Promise.all([
+            const [presentationRes, pubRes, eduRes, authRes, thesesRes, coursesRes] = await Promise.all([
+                fetch("/data/presentations.json"),
                 fetch("/data/publications.json"),
                 fetch("/data/education.json"),
                 fetch("/data/authors.json"),
                 fetch("/data/theses.json"),
                 fetch("/data/courses.json")
             ]);
+            const presentationData = await presentationRes.json();
             const pubs = await pubRes.json();
             const edus = await eduRes.json();
             edus.sort((a: IEducation, b: IEducation) => {
@@ -66,6 +70,7 @@ function HomePage() {
             const auths = await authRes.json();
             const theses = await thesesRes.json();
             const courses = await coursesRes.json();
+            setPresentations(presentationData);
             setPublications(pubs);
             setEducation(edus);
             setAuthors(auths);
@@ -244,16 +249,16 @@ function HomePage() {
                 <Stack direction={"column"} spacing={2}>
                     <Typography id="presentations" className="accent-title" variant="h5">Presentations</Typography>
 
-                    {publications.filter((x) => x.presented).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((publication) => (
-                        <Card variant="outlined">
+                    {[...presentations].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((presentation) => (
+                        <Card key={`${presentation.title}-${presentation.date}`} variant="outlined">
                             <CardContent>
                                 <Stack direction="row" justifyContent="space-between" spacing={2}>
                                     <Box>
                                         <Typography variant="subtitle1" fontWeight={600}>
-                                            {publication.title}
+                                            {presentation.title}
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
-                                            {publication.venue.short} · {publication.venue.parent}
+                                            {presentation.venue.short} · {presentation.venue.parent}
                                         </Typography>
                                     </Box>
                                     <Box
@@ -263,7 +268,7 @@ function HomePage() {
                                         fontWeight="medium"
                                         fontSize="1rem"
                                     >
-                                        {new Date(publication.date).toLocaleDateString()}
+                                        {new Date(presentation.date).toLocaleDateString()}
                                     </Box>
                                 </Stack>
                             </CardContent>
