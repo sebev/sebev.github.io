@@ -52,6 +52,7 @@ export function Publication({ pub, authors }: Props) {
 								return (
 									<React.Fragment key={id}>
 										{author ? renderAuthor(id, idx, author) : id}
+										{pub.sharedAuthors?.includes(id) && "*"}
 										{idx < pub.authors.length - 1 ? " · " : ""}
 									</React.Fragment>
 								);

@@ -116,11 +116,17 @@ function PublicationPage() {
 							return (
 								<React.Fragment key={id}>
 									{author ? renderAuthor(id, idx, author) : id}
+									{publication.sharedAuthors?.includes(id) && "*"}
 									{idx < publication.authors.length - 1 ? " · " : ""}
 								</React.Fragment>
 							);
 						})}
 					</Typography>
+					{publication.sharedAuthors && publication.sharedAuthors.length > 0 && (
+						<Typography variant="caption" color="text.secondary">
+							* These authors contributed equally.
+						</Typography>
+					)}
 				</Box>
 
 				<Divider />

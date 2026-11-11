@@ -3,6 +3,7 @@ export type IPublication = {
     title: string;
     abstract?: string;
     authors: string[];
+    sharedAuthors?: string[];
     date: string;
     venue: {
         name: string;
