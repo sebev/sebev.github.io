@@ -214,9 +214,25 @@
             "url": "https://eics.acm.org/2026/dc.html"
         },
         "links": [
+
+        ]
+    },
+    {
+        "key": "boone2026does",
+        "title": "Does Personality Persuade? Investigating Personality Trait Prompting and Persuasion in Large Language Models",
+        "abstract": "Large language models (LLMs) can be prompted to express different personality profiles, but it remains unclear how reliably they do so or whether personality affects their persuasiveness. We investigate these questions in two evaluations. First, we assess Big Five personality prompting using the IPIP-NEO-120, examining reproducibility, trait controllability, cross-trait effects, and unconditioned model profiles. Second, we conduct a within-subjects user study (N=32) in which participants discuss moral dilemmas with LLM agents whose personalities are aligned, mismatched, neutral, or unconditioned. We find that prompted profiles can be reproducible and responsive to requested traits, although controllability varies across models and changes to one trait can affect others. Unconditioned models also exhibit systematic personality profiles rather than neutral baselines. In the user study, personality alignment did not significantly affect perceived persuasiveness, stance switching, or confidence changes. Participants switched their initial stance in only 8 of 128 conversations, while confidence changes were more common. Participants' Big Five traits were not significantly associated with susceptibility to persuasion, but higher self-reported AI persuasion literacy was associated with less frequent confidence changes. Exploratory analysis showed that logical appeals dominated agent messages. These findings distinguish technical control over prompted LLM personality from observable influence on users and motivate evaluating persuasive interactions beyond explicit changes in decisions.",
+        "authors": ["rboone", "geerlings", "svanbrabant", "dvanacken", "kluyten"],
+        "date": "2026-11-04",
+        "venue": {
+            "name": "Preprint",
+            "parent": "arXiv",
+            "short": "arXiv",
+            "type": "preprint"
+        },
+        "links": [
             {
-                "type": "doi",
-                "url": "https://doi.org/10.1145/3816764"
+                "type": "arxiv",
+                "url": "https://arxiv.org/abs/2611.06572"
             }
         ]
     }

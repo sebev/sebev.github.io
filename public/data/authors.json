@@ -9,12 +9,20 @@
 				"url": "https://research.edm.uhasselt.be/dvanacken/"
 			},
 			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/davyvanacken"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0000-0001-8436-5119"
 			},
 			{
 				"type": "scholar",
 				"url": "https://scholar.google.com/citations?user=gIEnmpYAAAAJ"
+			},
+			{
+				"type": "openreview",
+				"url": "https://openreview.net/profile?id=~Davy_Vanacken1"
 			},
 			{
 				"type": "uhasselt",
@@ -31,12 +39,20 @@
 				"url": "https://gilleseerlings.be/"
 			},
 			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/gilles-eerlings"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0009-0005-7765-6774"
 			},
 			{
 				"type": "scholar",
 				"url": "https://scholar.google.com/citations?user=4tD_uWkAAAAJ"
+			},
+			{
+				"type": "openreview",
+				"url": "https://openreview.net/profile?id=~Gilles_Eerlings1"
 			},
 			{
 				"type": "github",
@@ -66,6 +82,10 @@
 				"url": "https://scholar.google.com/citations?user=Za5scZoAAAAJ"
 			},
 			{
+				"type": "openreview",
+				"url": "https://openreview.net/profile?id=~Gustavo_Rovelo_Ruiz1"
+			},
+			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/gustavo-roveloruiz"
 			}
@@ -89,6 +109,10 @@
 				"url": "https://scholar.google.com/citations?user=wB22A4sAAAAJ"
 			},
 			{
+				"type": "github",
+				"url": "https://github.com/j0r1"
+			},
+			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/jori-liesenborgs"
 			}
@@ -103,12 +127,20 @@
 				"url": "https://jarnethys.com/"
 			},
 			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/jarne-thys"
+			},
+			{
 				"type": "orcid",
 				"url": "https://orcid.org/0009-0005-9348-7405"
 			},
 			{
 				"type": "scholar",
 				"url": "https://scholar.google.com/citations?user=vYl-iywAAAAJ"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/JarneThys"
 			},
 			{
 				"type": "uhasselt",
@@ -134,6 +166,10 @@
 				"url": "https://scholar.google.com/citations?user=k3i997gAAAAJ"
 			},
 			{
+				"type": "openreview",
+				"url": "https://openreview.net/profile?id=~Kris_Luyten1"
+			},
+			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/kris-luyten"
 			}
@@ -154,6 +190,32 @@
 			{
 				"type": "uhasselt",
 				"url": "https://www.uhasselt.be/en/who-is-who/detail/raf-menten"
+			}
+		]
+	},
+	"rboone": {
+		"firstName": "Ruben",
+		"lastName": "Boone",
+		"links": [
+			{
+				"type": "linkedin",
+				"url": "https://www.linkedin.com/in/rubenboone"
+			},
+			{
+				"type": "orcid",
+				"url": "https://orcid.org/0009-0004-1743-3117"
+			},
+			{
+				"type": "openreview",
+				"url": "https://openreview.net/profile?id=~Ruben_Boone1"
+			},
+			{
+				"type": "github",
+				"url": "https://github.com/RubenBoone"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/ruben-boone"
 			}
 		]
 	},
@@ -182,8 +244,8 @@
 				"url": "https://www.researchgate.net/profile/Sebe-Vanbrabant"
 			},
 			{
-				"type": "uhasselt",
-				"url": "https://www.uhasselt.be/en/who-is-who/sebe-vanbrabant"
+				"type": "openreview",
+				"url": "https://openreview.net/profile?id=~Sebe_Vanbrabant1"
 			},
 			{
 				"type": "github",
@@ -192,6 +254,10 @@
 			{
 				"type": "github",
 				"url": "https://github.com/SebeV-1849168"
+			},
+			{
+				"type": "uhasselt",
+				"url": "https://www.uhasselt.be/en/who-is-who/sebe-vanbrabant"
 			}
 		]
 	}

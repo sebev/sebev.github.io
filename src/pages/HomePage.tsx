@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { CardDateRange } from "../components/CardDateRange";
 import { Education } from "../components/Education";
 import { Publication } from "../components/Publication";
+import { iconMap } from "../constants/iconMap";
 import { socialLinkTooltips } from "../constants/socialLinkTooltips";
 import { IAuthor } from "../types/author";
 import { ICourse } from "../types/course";
@@ -12,15 +13,6 @@ import { IPublication } from "../types/publication";
 import { IThesis } from "../types/thesis";
 
 const ICON_SIZE = 22;
-
-const iconMap: Record<string, string> = {
-    uhasselt: "https://www.uhasselt.be/media/ipqjpjbk/favicon_uhasselt.jpg?width=32&height=32",
-    orcid: "https://orcid.org/assets/icons/favicon.ico",
-    github: "https://github.githubassets.com/favicons/favicon.png",
-    scholar: "https://scholar.google.com/favicon.ico",
-    researchgate: "https://c5.rgstatic.net/m/42199702882742/images/favicon/favicon-32x32.png",
-    linkedin: "https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca",
-};
 
 function HomePage() {
     const theme = useTheme();
@@ -190,7 +182,6 @@ function HomePage() {
                         width={{ xs: "100%", sm: ICON_SIZE }}
                     >
                         {authors["svanbrabant"].links.map((x, i) => {
-                            if (x.type === "uhasselt") return null;
                             const iconUrl = iconMap[x.type];
                             if (!iconUrl) return null;
 
